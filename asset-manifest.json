@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fe-portfolio/static/css/main.48575dba.css",
+    "main.js": "/fe-portfolio/static/js/main.b6f47242.js",
+    "static/media/thumb_love_document.jpg": "/fe-portfolio/static/media/thumb_love_document.9f4117afcd88271f6e1b.jpg",
+    "static/media/thumb_daily_dev.jpg": "/fe-portfolio/static/media/thumb_daily_dev.4046b77b96460d315f69.jpg",
+    "index.html": "/fe-portfolio/index.html",
+    "main.48575dba.css.map": "/fe-portfolio/static/css/main.48575dba.css.map",
+    "main.b6f47242.js.map": "/fe-portfolio/static/js/main.b6f47242.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.48575dba.css",
+    "static/js/main.b6f47242.js"
+  ]
+}
