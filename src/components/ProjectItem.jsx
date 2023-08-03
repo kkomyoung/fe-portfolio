@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import Button from "./Button";
 
 export default function ProjectItem({ data, key }) {
-  const { thumb, title, desc, duration, team, tech, func, link } = data;
+  const { thumb, title, desc, duration, team, tech, func } = data;
 
   const cssDataList = css`
     margin-top: 24px;
@@ -111,12 +111,7 @@ export default function ProjectItem({ data, key }) {
           `}
         >
           <Button text="자세히보기" />
-          <Button
-            text="체험하기"
-            margin="0 0 0 12px"
-            style="line"
-            href={link.demo}
-          />
+          <Button text="체험하기" margin="0 0 0 12px" style="line" />
         </div>
       </div>
     </li>
