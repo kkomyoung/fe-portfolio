@@ -4,9 +4,9 @@ import { css } from "@emotion/react";
 import SectionTitle from "../components/SectionTitle";
 import SectionContainer from "../components/SectionContainer";
 
-export default function About() {
+export default function About({ aboutRef }) {
   return (
-    <SectionContainer>
+    <SectionContainer sectionRef={aboutRef}>
       <SectionTitle title={"About"} />
       <p
         css={css`

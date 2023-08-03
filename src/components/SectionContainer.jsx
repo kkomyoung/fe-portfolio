@@ -2,9 +2,14 @@
 import React from "react";
 import { css } from "@emotion/react";
 
-export default function SectionContainer({ children, textAlign = "center" }) {
+export default function SectionContainer({
+  sectionRef,
+  children,
+  textAlign = "center",
+}) {
   return (
     <section
+      ref={sectionRef}
       css={css`
         margin: 0 auto;
         max-width: 1236px;

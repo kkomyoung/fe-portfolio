@@ -46,9 +46,9 @@ const projectsData = [
   },
 ];
 
-export default function About() {
+export default function Project({ projectRef }) {
   return (
-    <SectionContainer textAlign="left">
+    <SectionContainer textAlign="left" sectionRef={projectRef}>
       <SectionTitle title={"Project"} />
       <ul>
         {projectsData.map((item, index) => (

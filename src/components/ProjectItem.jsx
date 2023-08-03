@@ -3,7 +3,7 @@ import React from "react";
 import { css } from "@emotion/react";
 import Button from "./Button";
 
-export default function ProjectItem({ data, key }) {
+export default function ProjectItem({ data }) {
   const { thumb, title, desc, duration, team, tech, func } = data;
 
   const cssDataList = css`
@@ -47,7 +47,6 @@ export default function ProjectItem({ data, key }) {
 
   return (
     <li
-      key={key}
       css={css`
         display: flex;
         & + li {

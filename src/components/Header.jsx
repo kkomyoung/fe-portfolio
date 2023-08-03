@@ -14,34 +14,64 @@ const subMenu = [
   },
 ];
 
-export default function Header() {
+export default function Header({ position = "absolute", sectionPosition }) {
+  const headerStyle = {
+    absolute: {
+      position: "absolute",
+      color: "#fff",
+    },
+    fixed: {
+      position: "fixed",
+      color: "#212121",
+      background:
+        "linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9) 50%, transparent);",
+    },
+  };
+
+  const moveScroll = (index) => {
+    const sectionTop = sectionPosition[index];
+
+    window.scrollBy({
+      top: sectionTop,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       css={css`
-        position: fixed;
+        z-index: 10;
         top: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding: 40px 60px;
-        color: #fff;
+        padding: 32px 60px;
+        transition: 0.5s;
+        ${headerStyle[position]}
       `}
     >
-      <a
-        href="#none"
+      <button
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+        }}
         css={css`
           font-size: 30px;
           font-weight: 900;
           margin-top: -5px;
         `}
-      >{`< />`}</a>
+      >{`< />`}</button>
       <nav>
         <ul
           css={css`
             display: flex;
           `}
         >
-          {globalMenu.map((item) => (
+          {globalMenu.map((item, index) => (
             <li
               key={item}
               css={css`
@@ -50,7 +80,7 @@ export default function Header() {
                 font-weight: 700;
               `}
             >
-              <a href="#none">{item}</a>
+              <button onClick={() => moveScroll(index)}>{item}</button>
             </li>
           ))}
         </ul>

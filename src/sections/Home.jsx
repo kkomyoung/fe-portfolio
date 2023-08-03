@@ -35,9 +35,45 @@ export default function Home() {
             }
           `}
         >
-          <span>안녕하세요</span>
-          <span>프론트엔드 개발자</span>
-          <span>김영애입니다</span>
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.1,
+              duration: 0.15,
+              ease: "easeIn",
+              type: "spring",
+              stiffness: 70,
+            }}
+          >
+            안녕하세요
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.2,
+              duration: 0.15,
+              ease: "easeIn",
+              type: "spring",
+              stiffness: 70,
+            }}
+          >
+            프론트엔드 개발자
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.3,
+              duration: 0.15,
+              ease: "easeIn",
+              type: "spring",
+              stiffness: 70,
+            }}
+          >
+            김영애입니다
+          </motion.span>
         </h1>
       </div>
       <div
