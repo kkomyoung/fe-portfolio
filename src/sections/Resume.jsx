@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/react";
+import Button from "../components/Button";
 
 export default function Resume() {
   return (
@@ -26,39 +27,8 @@ export default function Resume() {
         >
           상세한 프로필은 <u>📎김영애 이력서</u>에서 확인해주세요
         </p>
-        <button
-          css={css`
-            background: #212121;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            padding: 0 26px;
-            min-height: 48px;
-            border-radius: 48px;
-            line-height: 1;
-          `}
-        >
-          Notion으로 보기
-        </button>
-        <button
-          css={css`
-            background: #212121;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            padding: 0 26px;
-            min-height: 48px;
-            border-radius: 48px;
-            line-height: 1;
-            margin-left: 20px;
-          `}
-        >
-          PDF로 보기
-        </button>
+        <Button text="Notion으로 보기" />
+        <Button text="PDF로 보기" margin="0 0 0 12px" />
       </div>
     </section>
   );
