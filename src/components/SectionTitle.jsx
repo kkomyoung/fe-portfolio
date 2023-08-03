@@ -11,6 +11,7 @@ export default function SectionTitle({ title }) {
         font-weight: 700;
         padding-bottom: 70px;
         margin-bottom: 90px;
+        text-align: center;
         &:after {
           position: absolute;
           left: 50%;
