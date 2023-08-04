@@ -1,10 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
+import { css } from "@emotion/react";
 import SectionTitle from "../components/SectionTitle";
-import SectionContainer from "../components/SectionContainer";
 import ProjectItem from "../components/ProjectItem";
 import thumbLoveDocument from "../assets/images/thumb_love_document.jpg";
 import thumbDailyDev from "../assets/images/thumb_daily_dev.jpg";
+import sectionInner from "../styles/layout";
 
 const projectsData = [
   {
@@ -46,15 +47,20 @@ const projectsData = [
   },
 ];
 
-export default function Project({ projectRef }) {
+export default function Project() {
   return (
-    <SectionContainer textAlign="left" sectionRef={projectRef}>
+    <section
+      css={css`
+        ${sectionInner};
+        text-align: left;
+      `}
+    >
       <SectionTitle title={"Project"} />
       <ul>
         {projectsData.map((item, index) => (
           <ProjectItem key={index} data={item} />
         ))}
       </ul>
-    </SectionContainer>
+    </section>
   );
 }

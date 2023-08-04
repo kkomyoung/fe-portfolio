@@ -1,56 +1,47 @@
 /** @jsxImportSource @emotion/react */
 import React, { useEffect, useRef, useState } from "react";
 import { css } from "@emotion/react";
-import Home from "../sections/Home";
-import About from "../sections/About";
-import Resume from "../sections/Resume";
-import Project from "../sections/Project";
+import Home from "../layouts/Home";
+import About from "../layouts/About";
+import Resume from "../layouts/Resume";
+import Project from "../layouts/Project";
 import Header from "../components/Header";
+import Contact from "../layouts/Contact";
+import AnchorSection from "../components/AnchorSection";
+import handleHeaderStyle from "../utils/handleHeaderStyle";
+import handleAnchorPoints from "../utils/handleAnchorPoints";
 
 export default function Main() {
-  const [position, setPosition] = useState("absolute");
-  const [sectionPosition, setSectionPosition] = useState([0, 0, 0]);
-  const contentRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectRef = useRef(null);
+  const [headerStyle, setHeaderStyle] = useState("absolute");
+  const [anchorPoints, setAnchorPoints] = useState([0, 0, 0]);
+  const firstSection = useRef(null);
+  const secondSection = useRef(null);
+  const thirdSection = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // 콘텐츠 영역의 시작 위치
-      const contentOffsetTop =
-        contentRef.current.getBoundingClientRect().top + window.scrollY;
-      const aboutOffsetTop = aboutRef.current.getBoundingClientRect().top;
-      const projectOffsetTop = projectRef.current.getBoundingClientRect().top;
+    setAnchorPoints(
+      handleAnchorPoints([firstSection, secondSection, thirdSection])
+    );
 
-      let copy = [...sectionPosition];
-      copy[0] = aboutOffsetTop;
-      copy[1] = projectOffsetTop;
-
-      setSectionPosition(copy);
-
-      if (window.scrollY >= contentOffsetTop) {
-        setPosition("fixed");
-      } else {
-        setPosition("absolute");
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // 스크롤 위치에 따라 해더 스타일을 정해주는 함수
+    handleHeaderStyle(130, setHeaderStyle);
   }, []);
 
   return (
     <>
-      <Header position={position} sectionPosition={sectionPosition} />
+      <Header headerStyle={headerStyle} anchorPoints={anchorPoints} />
       <article>
         <Home />
-        <div ref={contentRef}>
-          <About aboutRef={aboutRef} />
+        <AnchorSection refName={firstSection}>
+          <About />
           <Resume />
-          <Project projectRef={projectRef} />
-        </div>
+        </AnchorSection>
+        <AnchorSection refName={secondSection}>
+          <Project />
+        </AnchorSection>
+        <AnchorSection refName={thirdSection}>
+          <Contact />
+        </AnchorSection>
       </article>
     </>
   );

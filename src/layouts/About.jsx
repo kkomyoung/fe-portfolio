@@ -2,11 +2,11 @@
 import React from "react";
 import { css } from "@emotion/react";
 import SectionTitle from "../components/SectionTitle";
-import SectionContainer from "../components/SectionContainer";
+import sectionInner from "../styles/layout";
 
-export default function About({ aboutRef }) {
+export default function About() {
   return (
-    <SectionContainer sectionRef={aboutRef}>
+    <section css={sectionInner}>
       <SectionTitle title={"About"} />
       <p
         css={css`
@@ -65,6 +65,6 @@ export default function About({ aboutRef }) {
         <br /> 현재는 이러한 경험을 바탕으로 프론트엔드 개발자로서 더욱 성장하기
         위해 사이드 프로젝트에 참여하여 개발 경험과 지식을 쌓고 있습니다.
       </p>
-    </SectionContainer>
+    </section>
   );
 }

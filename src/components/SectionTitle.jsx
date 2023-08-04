@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 
-export default function SectionTitle({ title }) {
+export default function SectionTitle({ title, textColor = "#212121" }) {
   return (
     <h2
       css={css`
@@ -12,6 +12,7 @@ export default function SectionTitle({ title }) {
         padding-bottom: 70px;
         margin-bottom: 90px;
         text-align: center;
+        color: ${textColor};
         &:after {
           position: absolute;
           left: 50%;

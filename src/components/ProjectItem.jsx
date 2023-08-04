@@ -9,6 +9,7 @@ export default function ProjectItem({ data }) {
   const cssDataList = css`
     margin-top: 24px;
     line-height: 1.65;
+    word-break: keep-all;
 
     dt {
       font-size: 15px;

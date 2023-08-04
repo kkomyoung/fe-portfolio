@@ -2,6 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import Button from "../components/Button";
+import sectionInner from "../styles/layout";
 
 export default function Resume() {
   return (
@@ -12,10 +13,8 @@ export default function Resume() {
     >
       <div
         css={css`
-          margin: 0 auto;
-          max-width: 1026px;
+          ${sectionInner};
           padding: 120px 40px;
-          text-align: center;
         `}
       >
         <p
