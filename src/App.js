@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Resume from "./pages/Resume";
 import Main from "./pages/Main";
-import Header from "./components/Header";
 
 function App() {
   return (
     <main className="App">
-      <Main />
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </BrowserRouter>
     </main>
   );
 }
