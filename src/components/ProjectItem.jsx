@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import { css } from "@emotion/react";
 import Button from "./Button";
 
@@ -112,7 +111,7 @@ export default function ProjectItem({ data }) {
           `}
         >
           <Button text="자세히보기" />
-          <Button text="체험하기" margin="0 0 0 12px" style="line" />
+          <Button text="체험하기" margin="0 0 0 12px" type="line" />
         </div>
       </div>
     </li>

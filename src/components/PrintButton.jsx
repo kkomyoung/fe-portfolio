@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from "react";
+import React from "react";
 import { PrinterIcon } from "@heroicons/react/24/solid";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";

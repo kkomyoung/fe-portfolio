@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { useEffect } from "react";
+import React from "react";
 import { css } from "@emotion/react";
 import PrintButton from "./PrintButton";
 import ScrollTopButton from "./ScrollTopButton";

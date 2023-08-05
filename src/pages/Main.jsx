@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import React, { useEffect, useRef, useState } from "react";
-import { css } from "@emotion/react";
 import Home from "../layouts/Home";
 import About from "../layouts/About";
 import Resume from "../layouts/Resume";

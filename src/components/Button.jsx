@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 
-export default function Button({ text, margin, style = "fill" }) {
+export default function Button({ text, margin, type = "fill" }) {
   const buttonStyle = {
     fill: {
       background: "#212121",
@@ -26,7 +26,7 @@ export default function Button({ text, margin, style = "fill" }) {
         border-radius: 48px;
         line-height: 1;
         margin: ${margin};
-        ${buttonStyle[style]}
+        ${buttonStyle[type]}
       `}
     >
       {text}

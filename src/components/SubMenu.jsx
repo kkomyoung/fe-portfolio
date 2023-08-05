@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { ReactComponent as IconGithub } from "../assets/icon/icon_github.svg";
 import { ReactComponent as IconVelog } from "../assets/icon/icon_velog.svg";
