@@ -10,6 +10,7 @@ import Contact from "../layouts/Contact";
 import AnchorSection from "../components/AnchorSection";
 import handleHeaderStyle from "../utils/handleHeaderStyle";
 import getAnchorPoints from "../utils/getAnchorPoints";
+import SideButtonWrap from "../components/SideButtonWrap";
 
 export default function Main() {
   const [headerStyle, setHeaderStyle] = useState("absolute");
@@ -41,6 +42,7 @@ export default function Main() {
           <Contact />
         </AnchorSection>
       </article>
+      <SideButtonWrap headerStyle={headerStyle} />
     </>
   );
 }
