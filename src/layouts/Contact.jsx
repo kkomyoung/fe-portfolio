@@ -10,7 +10,7 @@ const StyledContactDataList = styled.div`
     display: flex;
     justify-content: center;
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 300;
 
     & + dl {
@@ -33,7 +33,7 @@ export default function Contact() {
       <div
         css={css`
           ${sectionInner};
-          /* padding: 200px 40px; */
+          padding: 160px 40px;
         `}
       >
         <SectionTitle title="Contact" textColor="#fff" />

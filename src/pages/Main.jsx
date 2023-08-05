@@ -9,7 +9,7 @@ import Header from "../components/Header";
 import Contact from "../layouts/Contact";
 import AnchorSection from "../components/AnchorSection";
 import handleHeaderStyle from "../utils/handleHeaderStyle";
-import handleAnchorPoints from "../utils/handleAnchorPoints";
+import getAnchorPoints from "../utils/getAnchorPoints";
 
 export default function Main() {
   const [headerStyle, setHeaderStyle] = useState("absolute");
@@ -19,12 +19,10 @@ export default function Main() {
   const thirdSection = useRef(null);
 
   useEffect(() => {
-    setAnchorPoints(
-      handleAnchorPoints([firstSection, secondSection, thirdSection])
-    );
+    const points = getAnchorPoints([firstSection, secondSection, thirdSection]);
 
-    // 스크롤 위치에 따라 해더 스타일을 정해주는 함수
-    handleHeaderStyle(130, setHeaderStyle);
+    setAnchorPoints(points);
+    handleHeaderStyle(points[0], setHeaderStyle);
   }, []);
 
   return (

@@ -65,6 +65,7 @@ export default function ProjectItem({ data }) {
           margin-right: 40px;
           background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat
             center/cover;
+          border-radius: 20px;
         `}
       ></figure>
       <div
