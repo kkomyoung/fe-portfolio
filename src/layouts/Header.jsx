@@ -38,7 +38,7 @@ export default function Header({ headerStyle = "fixed", anchorPoints }) {
         ${headerStyleList[headerStyle]}
       `}
     >
-      <LogoButton />
+      <LogoButton anchorPoints={anchorPoints} />
       {anchorPoints && <GlobalMenu anchorPoints={anchorPoints} />}
       <SubMenu />
     </header>

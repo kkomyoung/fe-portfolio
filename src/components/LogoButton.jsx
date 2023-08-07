@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router-dom";
 
 const StyledLogoButton = styled.button`
   font-size: 30px;
@@ -8,18 +9,21 @@ const StyledLogoButton = styled.button`
   margin-top: -5px;
 `;
 
-export default function LogoButton() {
-  return (
-    <StyledLogoButton
-      onClick={() => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      }}
-    >
-      {`< />`}
-    </StyledLogoButton>
-  );
+export default function LogoButton({ anchorPoints }) {
+  const navigate = useNavigate();
+
+  const setFeature = () => {
+    if (!anchorPoints) {
+      navigate("/");
+      window.scrollTo(0, 0);
+    } else {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return <StyledLogoButton onClick={setFeature}>{`< />`}</StyledLogoButton>;
 }
