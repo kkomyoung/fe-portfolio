@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
 
 export const globalMenu = ["About", "Project", "Contact"];
 
@@ -38,9 +37,9 @@ export default function GlobalMenu({ anchorPoints }) {
             <button onClick={() => moveScroll(index)}>{item}</button>
           </li>
         ))}
-        <li>
+        {/* <li>
           <Link to="/resume">Resume</Link>
-        </li>
+        </li> */}
       </ul>
     </StyledGlobalMenu>
   );

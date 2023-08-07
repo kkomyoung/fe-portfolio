@@ -4,12 +4,13 @@ import Home from "../layouts/Home";
 import About from "../layouts/About";
 import Resume from "../layouts/Resume";
 import Project from "../layouts/Project";
-import Header from "../components/Header";
+import Header from "../layouts/Header";
 import Contact from "../layouts/Contact";
 import AnchorSection from "../components/AnchorSection";
 import handleHeaderStyle from "../utils/handleHeaderStyle";
 import getAnchorPoints from "../utils/getAnchorPoints";
 import SideButtonWrap from "../components/SideButtonWrap";
+import MotionWrapper from "../components/MotionWrapper";
 
 export default function Main() {
   const [headerStyle, setHeaderStyle] = useState("absolute");
@@ -26,7 +27,7 @@ export default function Main() {
   }, []);
 
   return (
-    <>
+    <MotionWrapper>
       <Header headerStyle={headerStyle} anchorPoints={anchorPoints} />
       <article>
         <Home />
@@ -42,6 +43,6 @@ export default function Main() {
         </AnchorSection>
       </article>
       <SideButtonWrap headerStyle={headerStyle} />
-    </>
+    </MotionWrapper>
   );
 }

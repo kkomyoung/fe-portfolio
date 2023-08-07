@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import SectionTitle from "../components/SectionTitle";
-import sectionInner from "../styles/layout";
+import sectionInner from "../styles/style.layout";
 
 export default function About() {
   return (

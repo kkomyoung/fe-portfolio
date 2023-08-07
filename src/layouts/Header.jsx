@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
 import { css } from "@emotion/react";
-import GlobalMenu from "./GlobalMenu";
-import SubMenu from "./SubMenu";
-import LogoButton from "./LogoButton";
+import GlobalMenu from "../components/GlobalMenu";
+import SubMenu from "../components/SubMenu";
+import LogoButton from "../components/LogoButton";
 
 const headerStyleList = {
   absolute: {

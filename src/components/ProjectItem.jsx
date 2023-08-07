@@ -110,8 +110,8 @@ export default function ProjectItem({ data }) {
             margin-top: 34px;
           `}
         >
-          <Button text="자세히보기" />
-          <Button text="체험하기" margin="0 0 0 12px" type="line" />
+          <Button text="자세히 보기" />
+          <Button text="체험하기" type="line" />
         </div>
       </div>
     </li>
