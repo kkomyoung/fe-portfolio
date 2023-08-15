@@ -66,27 +66,24 @@ export default function Resume() {
 
         <IntroSection>
           <p className="title">
-            섬세한 UI 구현에 강점을 가진 프론트엔드 개발자, 김영애입니다.
+            20개 이상의 웹사이트 구축·운영 경험을 가진 개발자, 김영애입니다.
           </p>
+          <p className="desc"></p>
           <p className="desc">
-            웹 에이전시에서 2년 반 동안 10개 이상의 프로젝트에 참여 하며 다양한
-            작업 환경에서 경험을 쌓았습니다.
+            웹 에이전시에서 2년 반동안 20개 이상의 프로젝트에 참여하며 여러 작업
+            환경에서 경험을 쌓았습니다.
+            <br /> 웹 퍼블리셔로 일을 시작하여 반응형 UI 구현, 크로스 브라우징,
+            웹 접근성 작업 등 다양한 업무를 담당했습니다.
             <br />
-            이를 통해 다른 팀원들과 협력하고 소통하는 방법을 배웠습니다.
+            <br /> 특히, 케이뱅크와 흥국화재와 같은 큰 규모의 구축 프로젝트에서
+            공통 컴포넌트를 전담하여 작업하고 관리한 경험을 바탕으로,
+            <br /> 사내 퍼블리싱 가이드 작성, UI 컴포넌트 모듈화 작업에 참여하여
+            프로젝트 구축 시간을 단축하는데 기여를 했습니다.
+            <br /> 이를 통해 협업을 위한 가독성 있는 코드에 대한 고민을 많이
+            하게 되었고 팀원들과 원활하게 소통하는 방법을 배웠습니다.
             <br />
-            <br />
-            처음에는 웹 퍼블리셔로 일을 시작하여 반응형 UI 구현, 크로스
-            브라우징, 웹 접근성 작업 등 다양한 업무를 경험했습니다.
-            <br />
-            특히, 케이뱅크와 흥국화재와 같은 큰 규모의 프로젝트에서는 공통
-            컴포넌트를 작업하고 관리하는 업무를 맡기도 했습니다.
-            <br />
-            이로 인해 재사용 가능한 코드와 협업을 위한 가독성 있는 코드에 대한
-            고민을 많이 하게 되었습니다.
-            <br />
-            <br />
-            현재는 이러한 경험을 바탕으로 프론트엔드 개발자로서 더욱 성장하기
-            위해 사이드 프로젝트에 참여하여 개발 경험과 지식을 쌓고 있습니다.
+            <br /> 현재는 이러한 경험을 바탕으로 사이드 프로젝트에 참여하며
+            프론트엔드 개발자로서의 팀 경험과 지식을 쌓고 있습니다.
           </p>
         </IntroSection>
 
@@ -111,12 +108,10 @@ export default function Resume() {
                       <Point>9개</Point>의 웹 사이트 <Point>구축</Point> 경험
                     </li>
                     <li>
-                      <Point>18개</Point>의 웹 사이트 <Point>운영</Point> 경험
+                      <Point>11개</Point>의 웹 사이트 <Point>운영</Point> 경험
                     </li>
                     <li>사내 퍼블리싱 가이드 작성 및 코딩리스트 고도화</li>
-                    <li>
-                      재사용 가능한 UI 컴포넌트 모듈화 작업 참여 (ES6 + jQuery)
-                    </li>
+                    <li>재사용 가능한 UI 컴포넌트 모듈화 작업 참여</li>
                   </DetailList>
                 </InfoDetail>
               </li>
@@ -195,9 +190,12 @@ export default function Resume() {
                     </li>
                     <li>
                       <Point>9명의 퍼블리셔</Point>들이 동일한 마크업 구조로
-                      작업 할 수 있도록 공통 컴포넌트를 관리하는 역할을 함
+                      작업 할 수 있도록 <Point>공통 컴포넌트를 관리</Point>하는
+                      역할을 함
                     </li>
-                    <li>웹 접근성 검사를 토대로 수정 작업에 참여함</li>
+                    <li>
+                      <Point>웹 접근성</Point> 검사를 토대로 수정 작업에 참여함
+                    </li>
                   </DetailList>
                 </InfoDetail>
                 <InfoDetail>
@@ -445,8 +443,14 @@ export default function Resume() {
                 <InfoDetail>
                   <h5 className="title">주요 업무</h5>
                   <DetailList>
-                    <li>반응형 퍼블리싱 작업</li>
-                    <li>다국어 버전 사이트 작업</li>
+                    <li>
+                      진행 중인 프로젝트에 중도 참여하여{" "}
+                      <Point>부정확하게 마크업된 반응형 화면을 수정</Point>하고,
+                      일정에 맞추어 사이트가 성공적으로 오픈하도록 기여함
+                    </li>
+                    <li>
+                      다국어(영어, 스페인어) 지원이 가능하도록 CSS 수정 작업
+                    </li>
                   </DetailList>
                 </InfoDetail>
                 <InfoDetail>
@@ -485,10 +489,13 @@ export default function Resume() {
                 <InfoDetail>
                   <h5 className="title">주요 업무</h5>
                   <DetailList>
-                    <li>반응형, 다국어 버전 사이트 유지보수 작업</li>
                     <li>
-                      Outlook을 포함한 여러 종류의 메일 서비스에 대응할 수 있는
-                      뉴스레터 화면 작업
+                      반응형, 다국어(영어, 중국어, 일본어) 버전 사이트 유지보수
+                      작업
+                    </li>
+                    <li>
+                      Outlook을 포함한 여러 종류의 메일 서비스에 대응할 수 있는{" "}
+                      <Point>뉴스레터 작업</Point>
                     </li>
                   </DetailList>
                 </InfoDetail>
@@ -519,7 +526,9 @@ export default function Resume() {
                   <h5 className="title">주요 업무</h5>
                   <DetailList>
                     <li>반응형, 다국어 버전 사이트 유지보수 작업</li>
-                    <li>웹 접근성 작업 참여</li>
+                    <li>
+                      <Point>웹 접근성 작업</Point> 참여
+                    </li>
                   </DetailList>
                 </InfoDetail>
                 <InfoDetail>
@@ -539,7 +548,7 @@ export default function Resume() {
                 </InfoDetail>
               </li>
               <li>
-                <h4 className="title">삼성자산운용</h4>
+                <h4 className="title">삼성자산운용 사이트 운영</h4>
                 <p className="sub-title">퍼블리셔 PL</p>
                 <time>
                   2020.02 ~ 2020.09 <br />
@@ -581,7 +590,8 @@ export default function Resume() {
                     <li>메인 페이지 담당 작업</li>
                     <li>
                       여러 웹 브라우저에서 일관된 그리드를 유지하기 위해 Can I
-                      use 사이트를 활용하여 크로스브라우징 작업하여 화면 구현
+                      use 사이트를 활용하여 <Point>크로스브라우징 </Point>
+                      테스트하여 화면 구현
                     </li>
                   </DetailList>
                 </InfoDetail>
@@ -704,23 +714,27 @@ export default function Resume() {
                   </span>
                 </h4>
                 <p className="sub-title">FE 개발</p>
-                <time>2023.06 ~ ing</time>
+                <time>
+                  2023.06 ~ ing
+                  <br />
+                  <span>1차 배포 후 추가 작업 중</span>
+                </time>
 
                 <InfoDetail>
                   <h5 className="title">주요 작업</h5>
                   <DetailList>
                     <li>
-                      GitHub Issue를 사용하여 프로젝트의 추가 기능, 개선사항,
-                      버그 등을 효율적으로 관리함
+                      <Point>GitHub Issue</Point>를 사용하여 프로젝트의 추가
+                      기능, 개선사항, 버그 등을 효율적으로 관리함
                     </li>
                     <li>
-                      페이지네이션(더보기) 구현 : 초기에 데이터를 모두 호출한 뒤
-                      클라이언트 단에서 가공하는 방식을 사용하여 페이지 전환을
-                      빠르게 하고 사용성을 높임
+                      <Point>페이지네이션(더보기) 구현</Point> : 초기에 데이터를
+                      모두 호출한 뒤 클라이언트 단에서 가공하는 방식을 사용하여
+                      페이지 전환을 빠르게 하고 사용성을 높임
                     </li>
                     <li>
                       React-Hook-Form을 사용하여 로그인, 회원가입 폼의 코드를
-                      줄이고 유효성 검사를 단순화함
+                      줄이고 <Point>유효성 검사를 단순화</Point>함
                     </li>
                   </DetailList>
                 </InfoDetail>
@@ -770,7 +784,7 @@ export default function Resume() {
                 <time>
                   2023.01 ~ 2023.06
                   <br />
-                  <span>총 6개월</span>
+                  <span>총 6개월 · 리팩토링 작업 중</span>
                 </time>
 
                 <InfoDetail>
