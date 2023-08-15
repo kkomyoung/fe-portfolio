@@ -36,6 +36,9 @@ export default function Header({ headerStyle = "fixed", anchorPoints }) {
         padding: 32px 60px;
         transition: 0.5s;
         ${headerStyleList[headerStyle]}
+        @media print {
+          display: none;
+        }
       `}
     >
       <LogoButton anchorPoints={anchorPoints} />

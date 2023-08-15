@@ -33,9 +33,9 @@ const StyledPrintButton = styled.button`
   }}
 `;
 
-export default function PrintButton({ headerStyle }) {
+export default function PrintButton({ headerStyle, handlePrint }) {
   return (
-    <StyledPrintButton headerStyle={headerStyle}>
+    <StyledPrintButton headerStyle={headerStyle} onClick={() => handlePrint()}>
       <PrinterIcon width="26px" />
     </StyledPrintButton>
   );
