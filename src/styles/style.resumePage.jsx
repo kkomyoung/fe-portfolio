@@ -9,6 +9,11 @@ import styled from "@emotion/styled";
 
 export const HeadSection = styled.section`
   margin-bottom: 6rem;
+
+  @media print {
+    margin-bottom: 4rem;
+  }
+
   h1 {
     font-size: 4.2rem;
     font-weight: 500;
@@ -26,7 +31,7 @@ export const HeadSection = styled.section`
       content: "";
       display: block;
       width: 6.4rem;
-      height: 1px;
+      height: 0.1rem;
       background: #212121;
     }
   }
@@ -55,17 +60,21 @@ export const IntroSection = styled.section`
     margin-top: 2.2rem;
     font-size: 1.6rem;
     font-weight: 300;
+
+    @media print {
+      margin-top: 1.5rem;
+    }
   }
 `;
 
 export const InfoWrap = styled.div`
   margin-top: 6.8rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0.1rem solid #ddd;
 `;
 
 export const InfoSection = styled.section`
   /* padding: 3.4rem 0; */
-  border-top: 2px solid #212121;
+  border-top: 0.2rem solid #212121;
   display: flex;
 
   .category {
@@ -77,10 +86,24 @@ export const InfoSection = styled.section`
     font-size: 2rem;
     font-weight: 500;
   }
+
+  .txt {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #5a5a5a;
+  }
 `;
 
 export const InfoList = styled.ul`
   flex: 3;
+  @media print {
+    flex: 4;
+  }
+
+  .hidden {
+    display: none;
+  }
 
   & > .link-list {
     padding: 3.4rem 0;
@@ -95,7 +118,7 @@ export const InfoList = styled.ul`
     padding: 3.4rem 0;
 
     & + li {
-      border-top: 1px solid #ddd;
+      border-top: 0.1rem solid #ddd;
     }
   }
 
@@ -130,7 +153,7 @@ export const InfoList = styled.ul`
     font-weight: 400;
     text-align: right;
     span {
-      margin-left: 3px;
+      margin-left: 0.3rem;
       font-weight: 300;
     }
   }
@@ -142,11 +165,23 @@ export const InfoList = styled.ul`
   }
 `;
 
+export const TitleWrap = styled.div`
+  @media print {
+    page-break-inside: avoid;
+  }
+`;
+
 export const InfoDetail = styled.div`
   width: 100%;
   max-width: 74rem;
   margin-top: 3rem;
   word-break: keep-all;
+
+  @media print {
+    margin-top: 1.8rem;
+    page-break-inside: avoid;
+    max-width: 85%;
+  }
 
   h5.title {
     font-size: 1.5rem;
@@ -195,10 +230,22 @@ export const StackList = styled.ul`
     font-size: 1.3rem;
     font-weight: 300;
     height: 3rem;
-    border: 1px solid #ddd;
+    border: 0.1rem solid #ddd;
     padding: 0 1.6rem;
     border-radius: 1.5rem;
     margin: 0.2rem;
+
+    &.point {
+      background: #212121;
+      color: white;
+      border: none;
+    }
+
+    &.tool {
+      background: #eee;
+      /* color: white; */
+      border: none;
+    }
   }
 `;
 
@@ -208,9 +255,11 @@ export const ATag = styled.a`
     top: 0.2rem;
     display: inline-block;
     width: 1.5rem;
+    margin-right: 0.2rem;
   }
   span {
-    border-bottom: 1px solid #212121;
+    /* border-bottom: 1px solid #212121; */
+    text-decoration: underline;
   }
 
   &:hover {
@@ -227,8 +276,9 @@ export const UrlTag = styled.a`
   height: 3.8rem;
 
   svg {
-    display: inline-block;
+    display: block;
     width: 1.8rem;
+    height: 1.8rem;
     margin-right: 0.8rem;
   }
 
