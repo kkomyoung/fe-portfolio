@@ -222,7 +222,9 @@ export const Point = styled.strong`
 
 export const StackList = styled.ul`
   margin: -0.2rem;
-  margin-top: 0.6rem;
+  & + ul {
+    margin-top: 0.6rem;
+  }
   li {
     display: inline-flex;
     justify-content: center;

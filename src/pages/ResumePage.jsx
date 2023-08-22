@@ -57,6 +57,13 @@ export default function Resume() {
           ${sectionInner};
           text-align: left;
           padding: 160px 40px 240px;
+          @media print {
+            padding: 0;
+          }
+          @page {
+            size: A4 portrait;
+            margin: 10mm;
+          }
         `}
       >
         <HeadSection>
@@ -96,40 +103,6 @@ export default function Resume() {
         </IntroSection>
 
         <InfoWrap>
-          <InfoSection>
-            <div className="category">
-              <h3>기술 스택</h3>
-            </div>
-            <InfoList>
-              <li>
-                <StackList>
-                  <li className="point">ES6</li>
-                  <li className="point">TypeScript</li>
-                  <li className="point">React</li>
-                  <li>React-Router</li>
-                  <li>React-Query</li>
-                  <li>Recoil</li>
-                  <li className="point">Vue</li>
-                  <li>Vuex</li>
-                  <li className="point">jQuery</li>
-                  <li>Pug</li>
-                  <li>SASS (SCSS)</li>
-                  <li>Styled-Components</li>
-                  <li>Emotion</li>
-                  <li>TailwindCSS</li>
-                </StackList>
-                <StackList>
-                  <li className="tool">Git</li>
-                  <li className="tool">Github</li>
-                  <li className="tool">Figma</li>
-                  <li className="tool">Framer</li>
-                  <li className="tool">Adobe XD</li>
-                  <li className="tool">Notion</li>
-                  <li className="tool">Jira</li>
-                </StackList>
-              </li>
-            </InfoList>
-          </InfoSection>
           <InfoSection>
             <div className="category">
               <h3>업무 경험</h3>
@@ -812,7 +785,11 @@ export default function Resume() {
                     </span>
                   </h4>
                   <p className="sub-title">FE 개발</p>
-                  <time>2023.06 ~ ing</time>
+                  <time>
+                    2023.06 ~ 2023.08
+                    <br />
+                    <span>총 3개월 · 리팩토링 중</span>
+                  </time>
                 </TitleWrap>
 
                 <InfoDetail>
@@ -888,8 +865,16 @@ export default function Resume() {
                   <h5 className="title">주요 작업</h5>
                   <DetailList>
                     <li>
-                      배포 전 반복된 기능 테스트를 통해{" "}
-                      <Point>20개 이상의 오류사항</Point>을 발견하고 수정
+                      배포 전 반복된 테스트를 통해{" "}
+                      <ATag
+                        href="https://minuxx.notion.site/be45aec614a74078b437845a80bab34c?pvs=4"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>20개 이상의 오류사항</span>{" "}
+                      </ATag>
+                      을 발견하고 수정
                     </li>
                     <li>
                       <Point>공통 컴포넌트</Point> 담당 구현 : 헤더, 모달,
@@ -1023,12 +1008,43 @@ export default function Resume() {
           </InfoSection>
           <InfoSection>
             <div className="category">
+              <h3>기술 스택</h3>
+            </div>
+            <InfoList>
+              <li>
+                <StackList>
+                  <li>ES6</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>React-Router</li>
+                  <li>React-Query</li>
+                  <li>Recoil</li>
+                  <li>SASS (SCSS)</li>
+                  <li>Styled-Components</li>
+                  <li>Emotion</li>
+                  <li>TailwindCSS</li>
+                  <li>jQuery</li>
+                </StackList>
+                <StackList>
+                  <li className="tool">Git</li>
+                  <li className="tool">Github</li>
+                  <li className="tool">Figma</li>
+                  <li className="tool">Framer</li>
+                  <li className="tool">Adobe XD</li>
+                  <li className="tool">Notion</li>
+                  <li className="tool">Jira</li>
+                </StackList>
+              </li>
+            </InfoList>
+          </InfoSection>
+          <InfoSection>
+            <div className="category">
               <h3>포트폴리오</h3>
             </div>
             <InfoList as="div">
               <div className="link-list">
                 <UrlTag
-                  href="https://kkomyoung.github.io/fe-portfolio"
+                  href="https://drive.google.com/file/d/1FyFQMvGSQXF2aL9xhoF9fDLMDFJkC_Jh/view?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                 >

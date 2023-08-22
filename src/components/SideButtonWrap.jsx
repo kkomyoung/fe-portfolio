@@ -11,6 +11,7 @@ export default function SideButtonWrap({ headerStyle, handlePrint }) {
         position: fixed;
         right: 32px;
         bottom: 32px;
+        z-index: 50;
         @media print {
           display: none;
         }

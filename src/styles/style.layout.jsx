@@ -6,16 +6,6 @@ const sectionInner = css`
   max-width: 1236px;
   padding: 20rem 4rem;
   text-align: center;
-
-  @media print {
-    width: 210mm;
-    padding: 0;
-  }
-
-  @page {
-    size: A4;
-    margin: 10mm;
-  }
 `;
 
 export default sectionInner;

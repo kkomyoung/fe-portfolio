@@ -12,7 +12,7 @@ const projectsData = [
     thumb: { thumbDailyDev },
     title: "데일리데브",
     desc: "유명 IT 기업의 기술 관련 글을 모아보고 구독하는 서비스",
-    duration: "2023.06 - 작업중",
+    duration: "2023.06 - 2023.08 (3개월) /  리팩토링 진행 중",
     team: "프론트엔드 1명, 백엔드 1명",
     tech: "React, TypeScript, Recoil, React-Query, React-Hook-Form, Tailwind",
     func: [
@@ -30,7 +30,7 @@ const projectsData = [
     thumb: { thumbLoveDocument },
     title: "연애서류합",
     desc: "소개팅 상대와의 궁합을 알아보는 서비스",
-    duration: "2023.03 - 2023.06 (12주)",
+    duration: "2023.01 - 2023.06 (6개월)",
     team: "프론트엔드 2명, 백엔드 1명, 디자인 3명",
     tech: "React, Recoil, React-Query, Styled-Component, Lottie",
     func: [
@@ -56,7 +56,13 @@ export default function Project() {
       `}
     >
       <SectionTitle title={"Project"} />
-      <ul>
+      <ul
+        css={css`
+          & > li {
+            margin-top: 90px;
+          }
+        `}
+      >
         {projectsData.map((item, index) => (
           <ProjectItem key={index} data={item} />
         ))}
