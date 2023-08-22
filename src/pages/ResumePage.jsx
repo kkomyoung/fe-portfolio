@@ -1030,7 +1030,8 @@ export default function Resume() {
                   <li className="tool">Github</li>
                   <li className="tool">Figma</li>
                   <li className="tool">Framer</li>
-                  <li className="tool">Adobe XD</li>
+                  <li className="tool">Swagger</li>
+                  <li className="tool">Postman</li>
                   <li className="tool">Notion</li>
                   <li className="tool">Jira</li>
                 </StackList>
