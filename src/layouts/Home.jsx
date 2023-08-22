@@ -1,11 +1,17 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
+import React, { useRef } from "react";
 import { css } from "@emotion/react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function Home() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 0px -700px 0px",
+  });
   return (
     <section
+      ref={ref}
       css={css`
         background: #212121;
         min-height: 100vh;
@@ -37,7 +43,7 @@ export default function Home() {
         >
           <motion.span
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
             transition={{
               delay: 0.1,
               duration: 0.15,
@@ -50,7 +56,7 @@ export default function Home() {
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
             transition={{
               delay: 0.2,
               duration: 0.15,
@@ -63,7 +69,7 @@ export default function Home() {
           </motion.span>
           <motion.span
             initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 40 }}
             transition={{
               delay: 0.3,
               duration: 0.15,
@@ -96,7 +102,7 @@ export default function Home() {
             background: #8b5cf6;
           `}
           initial={{ left: "-92vw" }}
-          animate={{ left: "-30vw" }}
+          animate={isInView ? { left: "-30vw" } : { left: "-92vw" }}
           transition={{
             delay: 0.7,
             duration: 0.7,
@@ -115,7 +121,9 @@ export default function Home() {
             background: #8b5cf6;
           `}
           initial={{ opacity: 0, left: "50%" }}
-          animate={{ opacity: 1, left: "65%" }}
+          animate={
+            isInView ? { opacity: 1, left: "65%" } : { opacity: 0, left: "50%" }
+          }
           transition={{
             delay: 0.9,
             duration: 0.2,

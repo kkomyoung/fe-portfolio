@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Button from "./Button";
+import InViewMotion from "./InViewMotion";
 
 export default function ProjectItem({ data }) {
   const { thumb, title, desc, duration, team, tech, func } = data;
@@ -46,74 +47,73 @@ export default function ProjectItem({ data }) {
   `;
 
   return (
-    <li
-      css={css`
-        display: flex;
-        & + li {
-          margin-top: 90px;
-        }
-      `}
-    >
-      <figure
-        css={css`
-          display: block;
-          background: skyblue;
-          width: 100%;
-          max-width: 588px;
-          height: 510px;
-          margin-right: 40px;
-          background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat
-            center/cover;
-          border-radius: 20px;
-        `}
-      ></figure>
+    <InViewMotion as={"li"}>
       <div
         css={css`
-          width: 100%;
-          max-width: 588px;
+          display: flex;
         `}
       >
-        <h3
+        <figure
           css={css`
-            font-size: 38px;
-            font-weight: 700;
+            display: block;
+            background: skyblue;
+            width: 100%;
+            max-width: 588px;
+            height: 510px;
+            margin-right: 40px;
+            background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat
+              center/cover;
+            border-radius: 20px;
           `}
-        >
-          {title}
-        </h3>
-        <p
-          css={css`
-            font-size: 18px;
-            font-weight: 300;
-          `}
-        >
-          {desc}
-        </p>
-        <dl css={cssDataList}>
-          <dt>개발 기간</dt>
-          <dd>{duration}</dd>
-          <dt>참여 인원</dt>
-          <dd>{team}</dd>
-          <dt>사용 기술</dt>
-          <dd>{tech}</dd>
-          <dt>주요 담당 작업</dt>
-          <dd>
-            <ul>
-              {func.map((item, index) => (
-                <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          </dd>
-        </dl>
+        ></figure>
         <div
           css={css`
-            margin-top: 34px;
+            width: 100%;
+            max-width: 588px;
           `}
         >
-          <Button text="자세히 보기" />
-          <Button text="체험하기" type="line" />
+          <h3
+            css={css`
+              font-size: 38px;
+              font-weight: 700;
+            `}
+          >
+            {title}
+          </h3>
+          <p
+            css={css`
+              font-size: 18px;
+              font-weight: 300;
+            `}
+          >
+            {desc}
+          </p>
+          <dl css={cssDataList}>
+            <dt>개발 기간</dt>
+            <dd>{duration}</dd>
+            <dt>참여 인원</dt>
+            <dd>{team}</dd>
+            <dt>사용 기술</dt>
+            <dd>{tech}</dd>
+            <dt>주요 담당 작업</dt>
+            <dd>
+              <ul>
+                {func.map((item, index) => (
+                  <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
+                ))}
+              </ul>
+            </dd>
+          </dl>
+          <div
+            css={css`
+              margin-top: 34px;
+            `}
+          >
+            <Button text="자세히 보기" />
+            <Button text="체험하기" type="line" />
+          </div>
         </div>
       </div>
-    </li>
+    </InViewMotion>
   );
 }
