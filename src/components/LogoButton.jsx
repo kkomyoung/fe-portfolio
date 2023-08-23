@@ -9,11 +9,11 @@ const StyledLogoButton = styled.button`
   margin-top: -5px;
 `;
 
-export default function LogoButton({ anchorPoints }) {
+export default function LogoButton({ type }) {
   const navigate = useNavigate();
 
   const setFeature = () => {
-    if (!anchorPoints) {
+    if (type !== "anchor") {
       navigate("/");
       window.scrollTo(0, 0);
     } else {
