@@ -23,15 +23,21 @@ import { LinkIcon } from "@heroicons/react/24/solid";
 import { ReactComponent as IconGithub } from "../assets/icon/icon_github.svg";
 import { ReactComponent as IconVelog } from "../assets/icon/icon_velog.svg";
 import SideButtonWrap from "../components/SideButtonWrap";
-import { useReactToPrint } from "react-to-print";
+// import { useReactToPrint } from "react-to-print";
 
 export default function Resume() {
   const [headerStyle, setHeaderStyled] = useState("absolute");
   const printRef = useRef();
-  const handlePrint = useReactToPrint({
-    content: () => printRef.current,
-    documentTitle: "이력서_프론트엔드_김영애",
-  });
+  // const handlePrint = useReactToPrint({
+  //   content: () => printRef.current,
+  //   documentTitle: "이력서_프론트엔드_김영애",
+  // });
+
+  const handlePrint = () => {
+    const url =
+      "https://drive.google.com/file/d/1WfeF2qbzD-11jpVx30ldGzyRBzktcDb7/view?usp=sharing";
+    window.open(url);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
