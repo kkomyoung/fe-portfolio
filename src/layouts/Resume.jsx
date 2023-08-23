@@ -2,7 +2,8 @@
 import React from "react";
 import { css } from "@emotion/react";
 import Button from "../components/Button";
-import sectionInner from "../styles/style.layout";
+import { sectionInner } from "../styles/style.layout";
+import InViewMotion from "../components/InViewMotion";
 
 export default function Resume() {
   return (
@@ -17,17 +18,19 @@ export default function Resume() {
           padding: 120px 40px;
         `}
       >
-        <p
-          css={css`
-            font-size: 22px;
-            font-weight: 300;
-            margin-bottom: 40px;
-          `}
-        >
-          상세한 프로필은 <u>📎김영애 이력서</u>에서 확인해주세요
-        </p>
+        <InViewMotion>
+          <p
+            css={css`
+              font-size: 22px;
+              font-weight: 300;
+              margin-bottom: 40px;
+            `}
+          >
+            상세한 프로필은 <u>📎김영애 이력서</u>에서 확인해주세요
+          </p>
 
-        <Button to="/resume" text="자세히 보기" />
+          <Button to="/resume" text="자세히 보기" />
+        </InViewMotion>
       </div>
     </section>
   );

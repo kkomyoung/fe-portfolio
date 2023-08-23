@@ -2,7 +2,7 @@
 import React from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import sectionInner from "../styles/style.layout";
+import { sectionInner } from "../styles/style.layout";
 import SectionTitle from "../components/SectionTitle";
 
 const StyledContactDataList = styled.div`

@@ -16,7 +16,7 @@ export default function Button({ to, href, onClick, text, type }) {
 
     if (href) {
       return (
-        <a href={href} className={className}>
+        <a href={href} className={className} target="_blank" rel="noreferrer">
           {children}
         </a>
       );
@@ -36,7 +36,7 @@ export default function Button({ to, href, onClick, text, type }) {
       css={css`
         & + a,
         & + button {
-          margin-left: 12px;
+          margin-left: 1.2rem;
         }
         ${type === "line" ? btnLine : btnFill}
       `}

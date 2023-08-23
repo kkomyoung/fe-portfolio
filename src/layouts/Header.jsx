@@ -6,25 +6,56 @@ import SubMenu from "../components/SubMenu";
 import LogoButton from "../components/LogoButton";
 
 const headerStyleList = {
-  absolute: {
-    position: "absolute",
-    color: "#fff",
-    ".icon-github": {
-      fill: "#fff",
+  anchor: {
+    absolute: {
+      position: "absolute",
+      color: "#fff",
+      ".icon-github": {
+        fill: "#fff",
+      },
+    },
+    fixed: {
+      position: "fixed",
+      color: "#212121",
+      background:
+        "linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9) 50%, transparent);",
+      svg: {
+        fill: "#212121",
+      },
     },
   },
-  fixed: {
-    position: "fixed",
-    color: "#212121",
-    background:
-      "linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9) 50%, transparent);",
-    svg: {
-      fill: "#212121",
+  resume: {
+    fixed: {
+      position: "fixed",
+      color: "#212121",
+      background:
+        "linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9) 50%, transparent);",
+      svg: {
+        fill: "#212121",
+      },
+    },
+  },
+  dailydev: {
+    absolute: {
+      position: "absolute",
+      color: "#212121",
+      ".icon-github": {
+        fill: "#212121",
+      },
+    },
+    fixed: {
+      position: "fixed",
+      color: "#212121",
+      background:
+        "linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.9) 50%, transparent);",
+      svg: {
+        fill: "#212121",
+      },
     },
   },
 };
 
-export default function Header({ headerStyle = "fixed", anchorPoints }) {
+export default function Header({ headerStyle = "fixed", anchorPoints, type }) {
   return (
     <header
       css={css`
@@ -35,14 +66,14 @@ export default function Header({ headerStyle = "fixed", anchorPoints }) {
         justify-content: space-between;
         padding: 32px 60px;
         transition: 0.5s;
-        ${headerStyleList[headerStyle]}
+        ${headerStyleList[type][headerStyle]}
         @media print {
           display: none;
         }
       `}
     >
-      <LogoButton anchorPoints={anchorPoints} />
-      {anchorPoints && <GlobalMenu anchorPoints={anchorPoints} />}
+      <LogoButton type={type} />
+      {type === "anchor" && <GlobalMenu anchorPoints={anchorPoints} />}
       <SubMenu />
     </header>
   );

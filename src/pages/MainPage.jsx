@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import React, { useEffect, useRef, useState } from "react";
-import { css } from "@emotion/react";
 import Home from "../layouts/Home";
 import About from "../layouts/About";
 import Resume from "../layouts/Resume";
@@ -12,9 +11,6 @@ import handleHeaderStyle from "../utils/handleHeaderStyle";
 import getAnchorPoints from "../utils/getAnchorPoints";
 import SideButtonWrap from "../components/SideButtonWrap";
 import MotionWrapper from "../components/MotionWrapper";
-import InViewMotion from "../components/InViewMotion";
-// import { useReactToPrint } from "react-to-print";
-// import MainPrint from "./print/MainPrintPage";
 
 export default function Main() {
   const [headerStyle, setHeaderStyle] = useState("absolute");
@@ -22,13 +18,6 @@ export default function Main() {
   const firstSection = useRef(null);
   const secondSection = useRef(null);
   const thirdSection = useRef(null);
-
-  // const printRef = useRef();
-
-  // const handlePrint = useReactToPrint({
-  //   content: () => printRef.current,
-  //   documentTitle: "포트폴리오_프론트엔드_김영애",
-  // });
 
   const handlePrint = () => {
     const url =
@@ -45,14 +34,16 @@ export default function Main() {
 
   return (
     <MotionWrapper>
-      <Header headerStyle={headerStyle} anchorPoints={anchorPoints} />
+      <Header
+        headerStyle={headerStyle}
+        anchorPoints={anchorPoints}
+        type="anchor"
+      />
       <article>
         <Home />
         <AnchorSection refName={firstSection}>
           <About />
-          <InViewMotion>
-            <Resume />
-          </InViewMotion>
+          <Resume />
         </AnchorSection>
         <AnchorSection refName={secondSection}>
           <Project />
@@ -61,11 +52,6 @@ export default function Main() {
           <Contact />
         </AnchorSection>
       </article>
-      <div
-        css={css`
-          display: none;
-        `}
-      ></div>
 
       <SideButtonWrap headerStyle={headerStyle} handlePrint={handlePrint} />
     </MotionWrapper>

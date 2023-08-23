@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { css } from "@emotion/react";
 import MotionWrapper from "../components/MotionWrapper";
 import Header from "../layouts/Header";
-import sectionInner from "../styles/style.layout";
+import { sectionInner } from "../styles/style.layout";
 import {
   HeadSection,
   InfoSection,
@@ -50,7 +50,7 @@ export default function Resume() {
 
   return (
     <MotionWrapper>
-      <Header />
+      <Header type="resume" />
       <article
         ref={printRef}
         css={css`

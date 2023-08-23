@@ -2,8 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Resume from "./pages/ResumePage";
 import Main from "./pages/MainPage";
-import DailyDevPage from "./pages/projects/DailyDevPage";
+import DailyDevPage from "./pages/DailyDevPage";
 import ScrollToTop from "./utils/ScrollToTop";
+import LoveDocPage from "./pages/LoveDocPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/daily-dev" element={<DailyDevPage />} />
+            <Route path="/love-document" element={<LoveDocPage />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </AnimatePresence>

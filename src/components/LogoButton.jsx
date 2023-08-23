@@ -13,6 +13,11 @@ export default function LogoButton({ type }) {
   const navigate = useNavigate();
 
   const setFeature = () => {
+    if (type === "dailydev" || type === "loveDocument") {
+      navigate(-1);
+      return;
+    }
+
     if (type !== "anchor") {
       navigate("/");
       window.scrollTo(0, 0);

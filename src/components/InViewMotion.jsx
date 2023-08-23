@@ -7,7 +7,7 @@ export default function InViewMotion({ children, as }) {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px 0px",
+    margin: "-80px 0px",
   });
 
   return (

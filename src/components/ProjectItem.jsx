@@ -2,47 +2,36 @@
 import { css } from "@emotion/react";
 import Button from "./Button";
 import InViewMotion from "./InViewMotion";
+import LinkButtonList from "./LinkButtonList";
+import StackList from "./StackList";
 
 export default function ProjectItem({ data }) {
-  const { thumb, title, desc, duration, team, tech, func } = data;
+  const {
+    thumb,
+    title,
+    desc,
+    duration,
+    team,
+    tech,
+    contribution,
+    link,
+    iconLink,
+  } = data;
 
   const cssDataList = css`
-    margin-top: 24px;
+    margin-top: 2.4rem;
     line-height: 1.65;
     word-break: keep-all;
 
     dt {
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: 500;
-      margin-top: 14px;
+      margin-top: 1.4rem;
     }
 
     dd {
-      font-size: 15px;
+      font-size: 1.5rem;
       font-weight: 300;
-    }
-
-    li {
-      position: relative;
-      padding-left: 13px;
-      margin-top: 2px;
-
-      &:before {
-        position: absolute;
-        left: 0;
-        top: 11px;
-        display: inline-block;
-        content: "";
-        width: 4px;
-        height: 4px;
-        background: #212121;
-        border-radius: 100%;
-      }
-
-      strong {
-        color: #8b5cf6;
-        font-weight: 500;
-      }
     }
   `;
 
@@ -58,23 +47,23 @@ export default function ProjectItem({ data }) {
             display: block;
             background: skyblue;
             width: 100%;
-            max-width: 588px;
-            height: 510px;
-            margin-right: 40px;
+            max-width: 58.8rem;
+            height: 51rem;
+            margin-right: 4rem;
             background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat
               center/cover;
-            border-radius: 20px;
+            border-radius: 2rem;
           `}
         ></figure>
         <div
           css={css`
             width: 100%;
-            max-width: 588px;
+            max-width: 58.8rem;
           `}
         >
           <h3
             css={css`
-              font-size: 38px;
+              font-size: 3.8rem;
               font-weight: 700;
             `}
           >
@@ -82,35 +71,33 @@ export default function ProjectItem({ data }) {
           </h3>
           <p
             css={css`
-              font-size: 18px;
+              font-size: 1.8rem;
               font-weight: 300;
             `}
           >
             {desc}
           </p>
           <dl css={cssDataList}>
+            <dd>
+              <LinkButtonList iconLinks={iconLink} />
+            </dd>
             <dt>개발 기간</dt>
             <dd>{duration}</dd>
             <dt>참여 인원</dt>
             <dd>{team}</dd>
+            <dt>기여도</dt>
+            <dd>{contribution}</dd>
             <dt>사용 기술</dt>
-            <dd>{tech}</dd>
-            <dt>주요 담당 작업</dt>
             <dd>
-              <ul>
-                {func.map((item, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
-                ))}
-              </ul>
+              <StackList tech={tech} margin="0.3rem 0 0 0" />
             </dd>
           </dl>
           <div
             css={css`
-              margin-top: 34px;
+              margin-top: 3.4rem;
             `}
           >
-            <Button text="자세히 보기" />
-            <Button text="체험하기" type="line" />
+            <Button to={link.more} text="자세히 보기" />
           </div>
         </div>
       </div>
