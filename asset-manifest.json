@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fe-portfolio/static/css/main.e81ca059.css",
-    "main.js": "/fe-portfolio/static/js/main.90dc42db.js",
+    "main.js": "/fe-portfolio/static/js/main.6e0e3888.js",
     "static/media/main_love_document.jpg": "/fe-portfolio/static/media/main_love_document.3efad2b71b6ebb4e9eff.jpg",
     "static/media/feature01_daily_dev.png": "/fe-portfolio/static/media/feature01_daily_dev.f8c9d089d28712217003.png",
     "static/media/feature02_daily_dev.png": "/fe-portfolio/static/media/feature02_daily_dev.7151ef396cb682d354cb.png",
@@ -23,10 +23,10 @@
     "static/media/icon_velog.svg": "/fe-portfolio/static/media/icon_velog.04d045b4a635ef85d04a10147f7e8e4c.svg",
     "static/media/icon_figma.svg": "/fe-portfolio/static/media/icon_figma.b1c2cd1253c6181f061bcd3e2ec6d5ca.svg",
     "main.e81ca059.css.map": "/fe-portfolio/static/css/main.e81ca059.css.map",
-    "main.90dc42db.js.map": "/fe-portfolio/static/js/main.90dc42db.js.map"
+    "main.6e0e3888.js.map": "/fe-portfolio/static/js/main.6e0e3888.js.map"
   },
   "entrypoints": [
     "static/css/main.e81ca059.css",
-    "static/js/main.90dc42db.js"
+    "static/js/main.6e0e3888.js"
   ]
 }
