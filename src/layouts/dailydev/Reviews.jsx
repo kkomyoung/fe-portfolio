@@ -34,8 +34,7 @@ function Review02() {
       <li>
         각 용도에 맞게 main, develop, feature 브랜치를 분리해서 사용하며,{" "}
         <br></br>프로젝트에 맞는 <strong>Git 브랜치 전략에 대해 고민</strong>해
-        볼 수 있었고
-        <strong>Git을 익숙하게 사용</strong>할 수 있게 되었습니다.
+        볼 수 있었고 <strong>Git을 익숙하게 사용</strong>할 수 있게 되었습니다.
       </li>
       <li>
         이전 프로젝트에서는 직접 구현했던 폼 유효성 검사 기능을 React-Hook-Form

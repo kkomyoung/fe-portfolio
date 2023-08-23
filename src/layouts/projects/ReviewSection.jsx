@@ -40,7 +40,7 @@ const datalist = css`
     &:before {
       position: absolute;
       left: 0;
-      top: 1.4rem;
+      top: 1.1rem;
       display: inline-block;
       content: "";
       width: 0.5rem;
@@ -62,7 +62,7 @@ const datalist = css`
       &:before {
         position: absolute;
         left: 0;
-        top: 1.4rem;
+        top: 1.1rem;
         display: inline-block;
         content: "";
         width: 0.5rem;
