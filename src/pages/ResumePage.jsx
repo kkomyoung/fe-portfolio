@@ -1003,28 +1003,6 @@ export default function Resume() {
           </InfoSection>
           <InfoSection>
             <div className="category">
-              <h3>수상</h3>
-            </div>
-            <InfoList>
-              <li>
-                <TitleWrap>
-                  <h4 className="title">웹 퍼블리셔 과정 최우수상</h4>
-                  <p className="sub-title">하이미디어컴퓨터학원</p>
-                  <time>2019</time>
-                </TitleWrap>
-                <InfoDetail>
-                  <DetailList>
-                    <li>
-                      6개월의 단위평가에서 가장 우수한 성적을 받은 학생에게
-                      수여하는 상
-                    </li>
-                  </DetailList>
-                </InfoDetail>
-              </li>
-            </InfoList>
-          </InfoSection>
-          <InfoSection>
-            <div className="category">
               <h3>자격증</h3>
             </div>
             <InfoList>

@@ -205,7 +205,7 @@ export const DetailList = styled.ul`
     &:before {
       position: absolute;
       left: 0;
-      top: 1.3rem;
+      top: 1rem;
       content: "";
       width: 0.4rem;
       height: 0.4rem;
