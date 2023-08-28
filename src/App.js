@@ -11,6 +11,17 @@ import { BrowserView, MobileView } from "react-device-detect";
 function App() {
   return (
     <main className="App">
+      {/* <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ScrollToTop />
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/daily-dev" element={<DailyDevPage />} />
+            <Route path="/love-document" element={<LoveDocPage />} />
+            <Route path="/resume" element={<Resume />} />
+          </Routes>
+        </AnimatePresence>
+      </BrowserRouter> */}
       <BrowserView>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <ScrollToTop />

@@ -23,21 +23,21 @@ import { LinkIcon } from "@heroicons/react/24/solid";
 import { ReactComponent as IconGithub } from "../assets/icon/icon_github.svg";
 import { ReactComponent as IconVelog } from "../assets/icon/icon_velog.svg";
 import SideButtonWrap from "../components/SideButtonWrap";
-// import { useReactToPrint } from "react-to-print";
+import { useReactToPrint } from "react-to-print";
 
 export default function Resume() {
   const [headerStyle, setHeaderStyled] = useState("absolute");
   const printRef = useRef();
-  // const handlePrint = useReactToPrint({
-  //   content: () => printRef.current,
-  //   documentTitle: "이력서_프론트엔드_김영애",
-  // });
+  const handlePrint = useReactToPrint({
+    content: () => printRef.current,
+    documentTitle: "이력서_프론트엔드_김영애",
+  });
 
-  const handlePrint = () => {
-    const url =
-      "https://drive.google.com/file/d/1WfeF2qbzD-11jpVx30ldGzyRBzktcDb7/view?usp=sharing";
-    window.open(url);
-  };
+  // const handlePrint = () => {
+  //   const url =
+  //     "https://drive.google.com/file/d/1WfeF2qbzD-11jpVx30ldGzyRBzktcDb7/view?usp=sharing";
+  //   window.open(url);
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,6 +109,41 @@ export default function Resume() {
         </IntroSection>
 
         <InfoWrap>
+          <InfoSection>
+            <div className="category">
+              <h3>기술 스택</h3>
+            </div>
+            <InfoList>
+              <li>
+                <StackList>
+                  <li>JavaScript</li>
+                  <li>TypeScript</li>
+                  <li>React</li>
+                  <li>jQuery</li>
+                </StackList>
+                <StackList>
+                  <li>React-Router</li>
+                  <li>React-Query</li>
+                  <li>Recoil</li>
+                  <li>SASS (SCSS)</li>
+                  <li>Styled-Components</li>
+                  <li>Emotion</li>
+                  <li>TailwindCSS</li>
+                </StackList>
+                <StackList>
+                  <li className="tool">Git</li>
+                  <li className="tool">Github</li>
+                  <li className="tool">Figma</li>
+                  <li className="tool">Framer</li>
+                  <li className="tool">Swagger</li>
+                  <li className="tool">Postman</li>
+                  <li className="tool">Notion</li>
+                  <li className="tool">Jira</li>
+                </StackList>
+              </li>
+            </InfoList>
+          </InfoSection>
+
           <InfoSection>
             <div className="category">
               <h3>업무 경험</h3>
@@ -466,14 +501,10 @@ export default function Resume() {
                 <InfoDetail>
                   <h5 className="title">운영 사이트 목록</h5>
                   <DetailList>
-                    <li>롯데월드</li>
-                    <li>서울스카이</li>
-                    <li>롯데워터파크</li>
-                    <li>롯데월드 아쿠아리움</li>
-                    <li>나뚜루</li>
-                    <li>롯데칠성</li>
-                    <li>롯데케미칼</li>
-                    <li>롯데제과</li>
+                    <li>
+                      롯데월드 / 서울스카이 / 롯데워터파크 / 롯데월드 아쿠아리움
+                      / 나뚜루 / 롯데칠성 / 롯데케미칼 / 롯데제과
+                    </li>
                   </DetailList>
                 </InfoDetail>
               </li>
@@ -918,10 +949,15 @@ export default function Resume() {
                     </li>
                     <li>
                       <UrlTag
-                        href="https://github.com/kkomyoung/love-document-client"
+                        href="https://kkomyoung.github.io/fe-portfolio/"
                         target="_blank"
                         rel="noreferrer"
                       >
+                        {/* <UrlTag
+                        href="https://github.com/kkomyoung/love-document-client"
+                        target="_blank"
+                        rel="noreferrer"
+                      > */}
                         <IconGithub />
                         <span>깃허브</span>
                       </UrlTag>
@@ -1012,38 +1048,7 @@ export default function Resume() {
               </li>
             </InfoList>
           </InfoSection>
-          <InfoSection>
-            <div className="category">
-              <h3>기술 스택</h3>
-            </div>
-            <InfoList>
-              <li>
-                <StackList>
-                  <li>ES6</li>
-                  <li>TypeScript</li>
-                  <li>React</li>
-                  <li>React-Router</li>
-                  <li>React-Query</li>
-                  <li>Recoil</li>
-                  <li>SASS (SCSS)</li>
-                  <li>Styled-Components</li>
-                  <li>Emotion</li>
-                  <li>TailwindCSS</li>
-                  <li>jQuery</li>
-                </StackList>
-                <StackList>
-                  <li className="tool">Git</li>
-                  <li className="tool">Github</li>
-                  <li className="tool">Figma</li>
-                  <li className="tool">Framer</li>
-                  <li className="tool">Swagger</li>
-                  <li className="tool">Postman</li>
-                  <li className="tool">Notion</li>
-                  <li className="tool">Jira</li>
-                </StackList>
-              </li>
-            </InfoList>
-          </InfoSection>
+
           <InfoSection>
             <div className="category">
               <h3>포트폴리오</h3>
