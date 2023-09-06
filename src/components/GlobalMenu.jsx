@@ -19,6 +19,10 @@ const StyledGlobalMenu = styled.nav`
     font-size: 22px;
     font-weight: 700;
   }
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export default function GlobalMenu({ anchorPoints }) {

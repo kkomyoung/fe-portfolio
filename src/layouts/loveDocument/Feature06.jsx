@@ -54,7 +54,9 @@ export default function Feature06() {
       <InViewMotion>
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
           `}
         >
           <figure>
@@ -63,8 +65,12 @@ export default function Feature06() {
           <div
             css={css`
               flex: 1;
-              margin-top: 10rem;
-              margin-left: -5rem;
+              margin-top: 3rem;
+
+              @media (min-width: 800px) {
+                margin-top: 10rem;
+                margin-left: -5rem;
+              }
             `}
           >
             <h3>회원 정보 수정</h3>

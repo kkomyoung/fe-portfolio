@@ -5,15 +5,21 @@ import { sectionInner } from "../../styles/style.layout";
 import InViewMotion from "../../components/InViewMotion";
 
 const datalist = css`
-  padding-left: 30%;
   margin-top: 5rem;
+  @media (min-width: 800px) {
+    padding-left: 30%;
+  }
+
   dl {
     & + dl {
       margin-top: 10rem;
     }
   }
   dt {
-    width: 30%;
+    @media (min-width: 800px) {
+      width: 30%;
+    }
+
     font-weight: 500;
     font-size: 2.2rem;
     text-decoration: underline;

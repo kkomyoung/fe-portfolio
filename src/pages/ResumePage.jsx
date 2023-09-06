@@ -16,6 +16,7 @@ import {
   StackList,
   ATag,
   UrlTag,
+  UrlTagBasic,
   UrlTagList,
   TitleWrap,
 } from "../styles/style.resumePage";
@@ -82,6 +83,28 @@ export default function Resume() {
             <span>kya754@gmail.com</span>
             <span>010-3701-1394</span>
           </div>
+          <UrlTagList>
+            <li>
+              <UrlTagBasic
+                href="https://github.com/kkomyoung"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconGithub />
+                <span>깃허브</span>
+              </UrlTagBasic>
+            </li>
+            <li>
+              <UrlTagBasic
+                href="https://velog.io/@kya754"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconVelog />
+                <span>블로그</span>
+              </UrlTagBasic>
+            </li>
+          </UrlTagList>
         </HeadSection>
 
         <IntroSection>
@@ -144,6 +167,36 @@ export default function Resume() {
             </InfoList>
           </InfoSection>
 
+          {/* <InfoSection>
+            <div className="category">
+              <h3>링크</h3>
+            </div>
+            <InfoList as="div">
+              <ul className="link-list">
+                <li>
+                  <UrlTag
+                    href="https://github.com/kkomyoung"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <IconGithub />
+                    <span>깃허브</span>
+                  </UrlTag>
+                </li>
+                <li>
+                  <UrlTag
+                    href="https://velog.io/@kya754"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <IconVelog />
+                    <span>블로그</span>
+                  </UrlTag>
+                </li>
+              </ul>
+            </InfoList>
+          </InfoSection> */}
+
           <InfoSection>
             <div className="category">
               <h3>업무 경험</h3>
@@ -172,10 +225,34 @@ export default function Resume() {
                     <li>재사용 가능한 UI 컴포넌트 모듈화 작업 참여</li>
                   </DetailList>
                 </InfoDetail>
+                <InfoDetail>
+                  <h5 className="title">사용 기술</h5>
+                  <StackList>
+                    <li>ES6</li>
+                    <li>jQuery</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Pug</li>
+                    <li>SCSS</li>
+                  </StackList>
+                  <StackList>
+                    <li>Gulp</li>
+                    <li>Webpack</li>
+                    <li>Babel</li>
+                    <li>JSDoc</li>
+                  </StackList>
+                  <StackList>
+                    <li className="tool">Git</li>
+                    <li className="tool">Figma</li>
+                    <li className="tool">Framer</li>
+                    <li className="tool">Notion</li>
+                    <li className="tool">Jira</li>
+                  </StackList>
+                </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">케이뱅크 모바일 웹앱 구축</h4>
+                  <h5 className="title">케이뱅크 모바일 웹앱 구축</h5>
                   <p className="sub-title">퍼블리셔 PA</p>
                   <time>
                     2021.08 ~ 2022.04 <br />
@@ -197,7 +274,7 @@ export default function Resume() {
                     </li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>ES6</li>
@@ -211,11 +288,11 @@ export default function Resume() {
                     <li>Git</li>
                     <li>Framer</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">흥국화재 모바일 웹/앱 구축</h4>
+                  <h5 className="title">흥국화재 모바일 웹/앱 구축</h5>
                   <p className="sub-title">퍼블리셔 PA</p>
                   <time>
                     2021.03 ~ 2021.07 <br />
@@ -261,7 +338,7 @@ export default function Resume() {
                     </li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>ES6</li>
@@ -274,7 +351,7 @@ export default function Resume() {
                     <li>JSDoc</li>
                     <li>Git</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
                 <InfoDetail>
                   <h5 className="title">링크</h5>
                   <UrlTagList>
@@ -312,7 +389,7 @@ export default function Resume() {
                     </li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>HTML</li>
@@ -324,7 +401,7 @@ export default function Resume() {
                     <li>Git</li>
                     <li>Figma</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
                 <InfoDetail>
                   <h5 className="title">링크</h5>
                   <UrlTagList>
@@ -341,9 +418,9 @@ export default function Resume() {
                   </UrlTagList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">롯데제과 반응형 웹 구축</h4>
+                  <h5 className="title">롯데제과 반응형 웹 구축</h5>
                   <p className="sub-title">퍼블리셔 PA</p>
                   <time>
                     2020.11 ~ 2021.01 <br />
@@ -391,7 +468,7 @@ export default function Resume() {
                     </li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>Pug</li>
@@ -402,7 +479,7 @@ export default function Resume() {
                     <li>Gulp</li>
                     <li>Git</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
                 <InfoDetail>
                   <h5 className="title">링크</h5>
                   <UrlTagList>
@@ -474,9 +551,9 @@ export default function Resume() {
                   </UrlTagList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">롯데정보통신 사이트 운영</h4>
+                  <h5 className="title">롯데정보통신 사이트 운영</h5>
                   <p className="sub-title">퍼블리셔 PA</p>
                   <time>
                     2020.06 ~ 2020.10 <br />
@@ -508,9 +585,9 @@ export default function Resume() {
                   </DetailList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">도화엔지니어링 구축</h4>
+                  <h5 className="title">도화엔지니어링 구축</h5>
                   <p className="sub-title">퍼블리셔 PA</p>
                   <time>
                     2020.08 ~ 2020.09 <br />
@@ -531,7 +608,7 @@ export default function Resume() {
                     </li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>Pug</li>
@@ -540,7 +617,7 @@ export default function Resume() {
                     <li>Gulp</li>
                     <li>Git</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
                 <InfoDetail>
                   <h5 className="title">링크</h5>
                   <UrlTagList>
@@ -557,9 +634,9 @@ export default function Resume() {
                   </UrlTagList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">김앤장 사이트 운영</h4>
+                  <h5 className="title">김앤장 사이트 운영</h5>
                   <p className="sub-title">퍼블리셔 PL</p>
                   <time>
                     2020.02 ~ 2020.09 <br />
@@ -596,9 +673,9 @@ export default function Resume() {
                   </UrlTagList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">LG화학 사이트 운영</h4>
+                  <h5 className="title">LG화학 사이트 운영</h5>
                   <p className="sub-title">퍼블리셔 PL</p>
                   <time>
                     2020.02 ~ 2020.09 <br />
@@ -634,9 +711,9 @@ export default function Resume() {
                   </UrlTagList>
                 </InfoDetail>
               </li>
-              <li>
+              <li className="sub-list">
                 <TitleWrap>
-                  <h4 className="title">삼성자산운용 사이트 운영</h4>
+                  <h5 className="title">삼성자산운용 사이트 운영</h5>
                   <p className="sub-title">퍼블리셔 PL</p>
                   <time>
                     2020.02 ~ 2020.09 <br />
@@ -803,32 +880,32 @@ export default function Resume() {
               </li>
             </InfoList>
           </InfoSection>
+
           <InfoSection>
             <div className="category">
               <h3>사이드 프로젝트</h3>
               <p className="txt">
                 📌 더 자세한 내용은
                 <br />
-                포트폴리오을 확인해주세요
+                포트폴리오를 확인해주세요
               </p>
             </div>
             <InfoList>
               <li>
                 <TitleWrap>
-                  <h4 className="title">
+                  <h5 className="title">
                     데일리데브
                     <span>
                       유명 IT 기업의 기술 관련 글을 모아보고 구독하는 서비스
                     </span>
-                  </h4>
-                  <p className="sub-title">FE 개발</p>
+                  </h5>
+                  <p className="sub-title">FE 개발 100%</p>
                   <time>
                     2023.06 ~ 2023.08
                     <br />
                     <span>총 3개월 · 리팩토링 중</span>
                   </time>
                 </TitleWrap>
-
                 <InfoDetail>
                   <h5 className="title">주요 작업</h5>
                   <DetailList>
@@ -890,7 +967,7 @@ export default function Resume() {
                     연애서류합
                     <span>소개팅 상대와의 궁합을 알아보는 서비스</span>
                   </h4>
-                  <p className="sub-title">기획 / FE 개발</p>
+                  <p className="sub-title">기획 40% / FE 개발 60%</p>
                   <time>
                     2023.01 ~ 2023.06
                     <br />
@@ -967,6 +1044,43 @@ export default function Resume() {
               </li>
             </InfoList>
           </InfoSection>
+
+          <InfoSection>
+            <div className="category">
+              <h3>포트폴리오</h3>
+            </div>
+            <InfoList as="div">
+              <ul className="link-list">
+                <li>
+                  <UrlTag
+                    href="https://kkomyoung.github.io/fe-portfolio/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkIcon />
+                    <span>웹 사이트 버전</span>
+                  </UrlTag>
+                </li>
+                <li>
+                  <UrlTag
+                    href="https://drive.google.com/file/d/1FyFQMvGSQXF2aL9xhoF9fDLMDFJkC_Jh/view?usp=sharing"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <LinkIcon />
+                    <span>PDF 버전</span>
+                  </UrlTag>
+                </li>
+
+                {/* <UrlTag
+                  href="https://drive.google.com/file/d/1FyFQMvGSQXF2aL9xhoF9fDLMDFJkC_Jh/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                > */}
+              </ul>
+            </InfoList>
+          </InfoSection>
+
           <InfoSection>
             <div className="category">
               <h3>학력</h3>
@@ -1024,53 +1138,6 @@ export default function Resume() {
                   <time>2018</time>
                 </TitleWrap>
               </li>
-            </InfoList>
-          </InfoSection>
-
-          <InfoSection>
-            <div className="category">
-              <h3>포트폴리오</h3>
-            </div>
-            <InfoList as="div">
-              <div className="link-list">
-                <UrlTag
-                  href="https://drive.google.com/file/d/1FyFQMvGSQXF2aL9xhoF9fDLMDFJkC_Jh/view?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <LinkIcon />
-                  <span>포트폴리오</span>
-                </UrlTag>
-              </div>
-            </InfoList>
-          </InfoSection>
-          <InfoSection>
-            <div className="category">
-              <h3>ETC</h3>
-            </div>
-            <InfoList as="div">
-              <ul className="link-list">
-                <li>
-                  <UrlTag
-                    href="https://github.com/kkomyoung"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <IconGithub />
-                    <span>깃허브</span>
-                  </UrlTag>
-                </li>
-                <li>
-                  <UrlTag
-                    href="https://velog.io/@kya754"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <IconVelog />
-                    <span>블로그</span>
-                  </UrlTag>
-                </li>
-              </ul>
             </InfoList>
           </InfoSection>
         </InfoWrap>

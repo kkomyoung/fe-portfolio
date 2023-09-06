@@ -54,7 +54,9 @@ export default function Feature02() {
       <InViewMotion>
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
           `}
         >
           <figure>

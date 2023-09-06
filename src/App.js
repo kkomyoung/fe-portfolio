@@ -5,13 +5,13 @@ import Main from "./pages/MainPage";
 import DailyDevPage from "./pages/DailyDevPage";
 import ScrollToTop from "./utils/ScrollToTop";
 import LoveDocPage from "./pages/LoveDocPage";
-import MobilePage from "./pages/MobilePage";
-import { BrowserView, MobileView } from "react-device-detect";
+// import MobilePage from "./pages/MobilePage";
+// import { BrowserView, MobileView } from "react-device-detect";
 
 function App() {
   return (
     <main className="App">
-      {/* <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <AnimatePresence>
           <Routes>
@@ -21,8 +21,8 @@ function App() {
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </AnimatePresence>
-      </BrowserRouter> */}
-      <BrowserView>
+      </BrowserRouter>
+      {/* <BrowserView>
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <ScrollToTop />
           <AnimatePresence>
@@ -44,7 +44,7 @@ function App() {
             <Route path="/resume" element={<MobilePage />} />
           </Routes>
         </BrowserRouter>
-      </MobileView>
+      </MobileView> */}
     </main>
   );
 }

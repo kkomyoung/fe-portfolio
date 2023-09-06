@@ -34,8 +34,16 @@ html,
 body {
   height: 100%;
   font-size: 62.5%;
-  min-width: 1256px;
+  /* min-width: 1256px; */
 }
+
+@media (max-width: 800px) {
+  html,
+  body {
+    font-size: 62.5%;
+  }
+}
+
 @media print {
   html,
   body {

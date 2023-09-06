@@ -39,6 +39,7 @@ export const HeadSection = styled.section`
   .contact {
     font-size: 1.6rem;
     font-weight: 300;
+    margin-bottom: 1.2rem;
 
     span + span {
       &:before {
@@ -105,6 +106,10 @@ export const InfoList = styled.ul`
     display: none;
   }
 
+  .sub-list {
+    padding-left: 2rem;
+  }
+
   & > .link-list {
     padding: 3.4rem 0;
 
@@ -127,6 +132,24 @@ export const InfoList = styled.ul`
     flex-wrap: wrap;
     align-items: center;
     font-size: 2rem;
+    font-weight: 500;
+
+    span {
+      font-size: 1.9rem;
+      font-weight: 300;
+
+      &:before {
+        content: "·";
+        margin: 0 0.5rem;
+      }
+    }
+  }
+
+  h5.title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1.8rem;
     font-weight: 500;
 
     span {
@@ -294,6 +317,26 @@ export const UrlTag = styled.a`
     background: #f5f6f8;
     border-radius: 0.6rem;
     transition: 0.2s;
+  }
+`;
+
+export const UrlTagBasic = styled.a`
+  display: inline-flex;
+  align-items: center;
+  height: 3.8rem;
+  margin-right: 2.6rem;
+
+  svg {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.8rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+    color: #8b5cf6;
+    text-decoration: underline;
   }
 `;
 

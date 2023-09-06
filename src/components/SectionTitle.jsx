@@ -9,10 +9,10 @@ export default function SectionTitle({ title, textColor = "#212121" }) {
       <h2
         css={css`
           position: relative;
-          font-size: 50px;
+          font-size: 5rem;
           font-weight: 700;
-          padding-bottom: 70px;
-          margin-bottom: 90px;
+          padding-bottom: 7rem;
+          margin-bottom: 9rem;
           text-align: center;
           color: ${textColor};
           &:after {
@@ -22,10 +22,21 @@ export default function SectionTitle({ title, textColor = "#212121" }) {
             transform: translateX(-50%);
             content: "";
             display: block;
-            width: 24px;
-            height: 24px;
+            width: 2.4rem;
+            height: 2.4rem;
             border-radius: 100%;
             background: #8b5cf6;
+          }
+
+          @media (max-width: 800px) {
+            font-size: 4rem;
+            padding-bottom: 6rem;
+            margin-bottom: 5rem;
+
+            &:after {
+              width: 2rem;
+              height: 2rem;
+            }
           }
         `}
       >

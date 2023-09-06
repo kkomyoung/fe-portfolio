@@ -10,7 +10,7 @@ import { ReactComponent as IconNotion } from "../assets/icon/icon_notion.svg";
 export const PROJECT_DATA = [
   {
     id: "dailydev",
-    thumb: { thumbDailyDev },
+    thumb: thumbDailyDev,
     banner: mainDailyDev,
     title: "데일리데브",
     subDesc: "매일 아침 만나는 최신 IT 뉴스",
@@ -24,7 +24,7 @@ export const PROJECT_DATA = [
       "Recoil",
       "React-Query",
       "React-Hook-Form",
-      "Tailwind",
+      "TailwindCSS",
     ],
     link: {
       more: "/daily-dev",
@@ -54,7 +54,7 @@ export const PROJECT_DATA = [
   },
   {
     id: "loveDocument",
-    thumb: { thumbLoveDocument },
+    thumb: thumbLoveDocument,
     banner: mainLoveDoc,
     title: "연애서류합",
     subDesc: "찰떡궁합 이상형 찾기",

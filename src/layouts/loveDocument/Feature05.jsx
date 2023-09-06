@@ -55,7 +55,9 @@ export default function Feature05() {
       <InViewMotion>
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
           `}
         >
           <figure>
@@ -64,8 +66,11 @@ export default function Feature05() {
           <div
             css={css`
               flex: 1;
-              margin-top: 10rem;
-              margin-left: -16rem;
+              margin-top: 3rem;
+              @media (min-width: 800px) {
+                margin-top: 10rem;
+                margin-left: -16rem;
+              }
             `}
           >
             <h3>로그인</h3>

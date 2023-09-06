@@ -7,6 +7,10 @@ import InViewMotion from "../../components/InViewMotion";
 import LinkButtonList from "../../components/LinkButtonList";
 
 const datalist = css`
+  @media (max-width: 800px) {
+    margin-top: 5rem;
+  }
+
   dl {
     & + dl {
       margin-top: 2rem;
@@ -30,12 +34,17 @@ export default function OverViewSection({ data, color }) {
         ${sectionInner}
         padding: 10rem 4rem;
         text-align: left;
-        display: flex;
+
+        @media (min-width: 800px) {
+          display: flex;
+        }
       `}
     >
       <div
         css={css`
-          width: 30%;
+          @media (min-width: 800px) {
+            width: 30%;
+          }
         `}
       >
         <h2

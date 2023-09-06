@@ -56,7 +56,9 @@ export default function Feature02() {
       <InViewMotion>
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
             position: relative;
           `}
         >
@@ -66,7 +68,10 @@ export default function Feature02() {
           <div
             css={css`
               flex: 1.5;
-              margin-left: 6rem;
+
+              @media (min-width: 800px) {
+                margin-left: 6rem;
+              }
             `}
           >
             <div>
@@ -101,11 +106,17 @@ export default function Feature02() {
             </div>
             <div
               css={css`
-                position: absolute;
-                right: 0;
-                bottom: 10rem;
-                text-align: center;
-                width: 50%;
+                @media (min-width: 800px) {
+                  position: absolute;
+                  right: 0;
+                  bottom: 10rem;
+                  text-align: center;
+                  width: 50%;
+                }
+
+                @media (max-width: 800px) {
+                  margin-top: 4rem;
+                }
 
                 h3 {
                   display: inline-block;

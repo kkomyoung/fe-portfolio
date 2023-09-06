@@ -15,15 +15,15 @@ export default function Resume() {
       <div
         css={css`
           ${sectionInner};
-          padding: 120px 40px;
+          padding: 12rem 4rem;
         `}
       >
         <InViewMotion>
           <p
             css={css`
-              font-size: 22px;
+              font-size: 2.2rem;
               font-weight: 300;
-              margin-bottom: 40px;
+              margin-bottom: 4rem;
             `}
           >
             상세한 프로필은 <u>📎김영애 이력서</u>에서 확인해주세요

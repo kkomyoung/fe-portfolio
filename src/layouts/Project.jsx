@@ -20,7 +20,7 @@ export default function Project() {
       <ul
         css={css`
           & > li {
-            margin-top: 90px;
+            margin-top: 9rem;
           }
         `}
       >

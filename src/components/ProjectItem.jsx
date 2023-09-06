@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import Button from "./Button";
 import InViewMotion from "./InViewMotion";
 import LinkButtonList from "./LinkButtonList";
-import StackList from "./StackList";
+// import StackList from "./StackList";
 
 export default function ProjectItem({ data }) {
   const {
@@ -12,7 +12,7 @@ export default function ProjectItem({ data }) {
     desc,
     duration,
     team,
-    tech,
+    // tech,
     contribution,
     link,
     iconLink,
@@ -40,25 +40,47 @@ export default function ProjectItem({ data }) {
       <div
         css={css`
           display: flex;
+          flex-wrap: wrap;
         `}
       >
         <figure
           css={css`
             display: block;
-            background: skyblue;
-            width: 100%;
-            max-width: 58.8rem;
-            height: 51rem;
-            margin-right: 4rem;
-            background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat
-              center/cover;
-            border-radius: 2rem;
+            flex-basis: 40rem;
+            flex-grow: 1;
+            /* padding-top: 87%; */
+            /* height: 58rem; */
+            /* background: skyblue; */
+
+            /* background: url(${thumb[Object.keys(thumb)[0]]}) no-repeat center
+              top/contain; */
+            /* border-radius: 2rem; */
+
+            img {
+              display: block;
+              width: 100%;
+              border-radius: 2rem;
+            }
+
+            @media (max-width: 800px) {
+              flex-basis: fit-content;
+            }
           `}
-        ></figure>
+        >
+          <img src={thumb} alt="" />
+        </figure>
         <div
           css={css`
-            width: 100%;
-            max-width: 58.8rem;
+            flex-basis: 30rem;
+            flex-grow: 1;
+            padding: 2rem 4rem;
+            /* margin-left: 4rem; */
+
+            @media (max-width: 800px) {
+              flex-basis: fit-content;
+              padding: 0;
+              margin-top: 2rem;
+            }
           `}
         >
           <h3
@@ -87,10 +109,10 @@ export default function ProjectItem({ data }) {
             <dd>{team}</dd>
             <dt>기여도</dt>
             <dd>{contribution}</dd>
-            <dt>사용 기술</dt>
+            {/* <dt>사용 기술</dt>
             <dd>
               <StackList tech={tech} margin="0.3rem 0 0 0" />
-            </dd>
+            </dd> */}
           </dl>
           <div
             css={css`

@@ -42,7 +42,10 @@ export default function Feature02() {
         }
 
         figure {
-          margin-top: -17rem;
+          margin-top: 4rem;
+          @media (min-width: 800px) {
+            margin-top: -17rem;
+          }
         }
 
         img {

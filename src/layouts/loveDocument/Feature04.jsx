@@ -54,7 +54,9 @@ export default function Feature04() {
       <InViewMotion>
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
           `}
         >
           <figure>
@@ -64,7 +66,10 @@ export default function Feature04() {
             css={css`
               flex: 1;
               margin-top: 5rem;
-              margin-left: -12rem;
+
+              @media (min-width: 800px) {
+                margin-left: -12rem;
+              }
             `}
           >
             <div>

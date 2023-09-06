@@ -38,7 +38,9 @@ export default function Feature01() {
         dl {
           flex: 1;
           & + dl {
-            margin-left: 10rem;
+            @media (min-width: 800px) {
+              margin-left: 10rem;
+            }
           }
         }
 
@@ -64,7 +66,9 @@ export default function Feature01() {
 
         <div
           css={css`
-            display: flex;
+            @media (min-width: 800px) {
+              display: flex;
+            }
           `}
         >
           <dl>

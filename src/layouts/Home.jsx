@@ -14,7 +14,6 @@ export default function Home() {
       ref={ref}
       css={css`
         background: #212121;
-        min-height: 100vh;
         position: relative;
         overflow: hidden;
       `}
@@ -25,19 +24,28 @@ export default function Home() {
           z-index: 2;
           margin: 0 auto;
           max-width: 1236px;
-          padding: 0 40px;
+          padding: 0 4rem;
           min-height: 100vh;
           display: flex;
           align-items: center;
+
+          @media (max-width: 800px) {
+            min-height: auto;
+            height: 130vw;
+          }
         `}
       >
         <h1
           css={css`
-            font-size: 90px;
+            font-size: 9rem;
             font-weight: 700;
             color: #fff;
             & span {
               display: block;
+            }
+
+            @media (max-width: 800px) {
+              font-size: 10vw;
             }
           `}
         >

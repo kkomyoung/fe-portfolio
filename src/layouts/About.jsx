@@ -27,6 +27,23 @@ export default function About() {
               & + li {
                 margin-left: 4.2rem;
               }
+
+              @media (max-width: 700px) {
+                padding: 0.5rem;
+                div {
+                  font-size: 6rem !important;
+                }
+
+                & + li {
+                  margin-left: 0;
+                }
+              }
+
+              @media (max-width: 485px) {
+                div {
+                  font-size: 5rem !important;
+                }
+              }
             }
 
             span {
@@ -41,6 +58,11 @@ export default function About() {
               margin-top: 1rem;
               font-size: 1.5rem;
               font-weight: 400;
+
+              @media (max-width: 485px) {
+                margin-top: 0;
+                font-size: 1.3rem;
+              }
             }
           `}
         >
@@ -72,7 +94,7 @@ export default function About() {
       <InViewMotion>
         <p
           css={css`
-            font-size: 20px;
+            font-size: 2rem;
             font-weight: 300;
             margin-bottom: 20px;
           `}
@@ -83,13 +105,13 @@ export default function About() {
               font-weight: 500;
             `}
           >
-            프론트엔드 개발자, 김영애
+            개발자, 김영애
           </strong>
           입니다.
         </p>
         <p
           css={css`
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 300;
             line-height: 1.75;
           `}

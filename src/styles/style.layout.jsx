@@ -6,6 +6,10 @@ export const sectionInner = css`
   max-width: 1236px;
   padding: 20rem 4rem;
   text-align: center;
+
+  @media (max-width: 800px) {
+    padding: 10rem 4rem;
+  }
 `;
 
 export const InnerArea = css`
