@@ -893,12 +893,12 @@ export default function Resume() {
             <InfoList>
               <li>
                 <TitleWrap>
-                  <h5 className="title">
+                  <h4 className="title">
                     데일리데브
                     <span>
                       유명 IT 기업의 기술 관련 글을 모아보고 구독하는 서비스
                     </span>
-                  </h5>
+                  </h4>
                   <p className="sub-title">FE 개발 100%</p>
                   <time>
                     2023.06 ~ 2023.08
