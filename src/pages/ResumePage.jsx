@@ -1026,15 +1026,10 @@ export default function Resume() {
                     </li>
                     <li>
                       <UrlTag
-                        href="https://kkomyoung.github.io/fe-portfolio/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {/* <UrlTag
                         href="https://github.com/kkomyoung/love-document-client"
                         target="_blank"
                         rel="noreferrer"
-                      > */}
+                      >
                         <IconGithub />
                         <span>깃허브</span>
                       </UrlTag>
