@@ -958,6 +958,16 @@ export default function Resume() {
                         <span>깃허브</span>
                       </UrlTag>
                     </li>
+                    <li>
+                      <UrlTag
+                        href="https://www.youtube.com/watch?v=OTiMhn4DVe0"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>데모영상</span>
+                      </UrlTag>
+                    </li>
                   </UrlTagList>
                 </InfoDetail>
               </li>
@@ -1032,6 +1042,16 @@ export default function Resume() {
                       >
                         <IconGithub />
                         <span>깃허브</span>
+                      </UrlTag>
+                    </li>
+                    <li>
+                      <UrlTag
+                        href="https://www.youtube.com/watch?v=cgInZd0eHeQ"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>데모영상</span>
                       </UrlTag>
                     </li>
                   </UrlTagList>
