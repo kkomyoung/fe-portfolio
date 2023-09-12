@@ -142,12 +142,16 @@ export default function Resume() {
                   <li>JavaScript</li>
                   <li>TypeScript</li>
                   <li>React</li>
+                  <li>Vue</li>
                   <li>jQuery</li>
                 </StackList>
                 <StackList>
                   <li>React-Router</li>
                   <li>React-Query</li>
                   <li>Recoil</li>
+                  <li>Vuex</li>
+                </StackList>
+                <StackList>
                   <li>SASS (SCSS)</li>
                   <li>Styled-Components</li>
                   <li>Emotion</li>
