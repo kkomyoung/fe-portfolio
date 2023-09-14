@@ -361,7 +361,7 @@ export default function Resume() {
                   <UrlTagList>
                     <li>
                       <UrlTag
-                        href="https://www.love-document.com/"
+                        href="https://m.heungkukfire.co.kr/common/comm/main.do"
                         target="_blank"
                         rel="noreferrer"
                       >
