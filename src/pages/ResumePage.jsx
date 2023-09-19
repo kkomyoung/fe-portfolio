@@ -109,25 +109,31 @@ export default function Resume() {
 
         <IntroSection>
           <p className="title">
-            20개 이상의 웹사이트 구축·운영 경험을 가진 개발자, 김영애입니다.
+            케이뱅크 모바일 웹앱 구축 프로젝트에 참여한 개발자, 김영애입니다.
+            {/* 20개 이상의 웹사이트 구축·운영 경험을 가진 개발자, 김영애입니다. */}
           </p>
           <p className="desc">
-            웹 에이전시에서 2년 반동안 20개 이상의 프로젝트에 참여하며 여러 작업
-            환경에서 경험을 쌓았습니다.
+            웹 에이전시에서 2년 반 동안 20개 이상의 프로젝트에 참여하며 여러
+            작업 환경에서 경험을 쌓았습니다.
             <br /> 웹 퍼블리셔로 일을 시작하여 반응형 UI 구현, 크로스 브라우징,
             웹 접근성 작업 등 다양한 업무를 담당했습니다.
           </p>
           <p className="desc">
-            특히, 케이뱅크와 흥국화재와 같은 큰 규모의 구축 프로젝트에서 공통
+            특히, 케이뱅크와 흥국화재 같은 큰 규모의 구축 프로젝트에서 공통
             컴포넌트를 전담하여 작업하고 관리한 경험을 바탕으로,
             <br /> 사내 퍼블리싱 가이드 작성, UI 컴포넌트 모듈화 작업에 참여하여
-            프로젝트 구축 시간을 단축하는데 기여를 했습니다.
+            프로젝트 구축 시간을 단축하는 데 기여를 했습니다.
             <br /> 이를 통해 협업을 위한 가독성 있는 코드에 대한 고민을 많이
-            하게 되었고 팀원들과 원활하게 소통하는 방법을 배웠습니다.
+            하게 되었고 디자인과, 개발 직군 사이에서 원활하게 소통하는 방법을
+            배웠습니다.
           </p>
-          <p className="desc">
+          {/* <p className="desc">
             현재는 이러한 경험을 바탕으로 사이드 프로젝트에 참여하며 프론트엔드
             개발자로서의 팀 경험과 지식을 쌓고 있습니다.
+          </p> */}
+          <p className="desc">
+            케이뱅크 앱 구축 프로젝트에 참여했던 경험을 기반으로 퍼블리싱 업무
+            효율화에 기여할 것을 약속드립니다.
           </p>
         </IntroSection>
 
@@ -139,17 +145,18 @@ export default function Resume() {
             <InfoList>
               <li>
                 <StackList>
+                  <li>HTML</li>
+                  <li>CSS</li>
                   <li>JavaScript</li>
                   <li>TypeScript</li>
                   <li>React</li>
-                  <li>Vue</li>
                   <li>jQuery</li>
                 </StackList>
                 <StackList>
                   <li>React-Router</li>
                   <li>React-Query</li>
                   <li>Recoil</li>
-                  <li>Vuex</li>
+                  <li>Framer-motion</li>
                 </StackList>
                 <StackList>
                   <li>SASS (SCSS)</li>
@@ -158,14 +165,21 @@ export default function Resume() {
                   <li>TailwindCSS</li>
                 </StackList>
                 <StackList>
-                  <li className="tool">Git</li>
-                  <li className="tool">Github</li>
+                  <li>Gulp</li>
+                  <li>Webpack</li>
+                  <li>Babel</li>
+                  <li>JSDoc</li>
+                  <li>Git</li>
+                  <li>Github</li>
+                </StackList>
+                <StackList>
                   <li className="tool">Figma</li>
                   <li className="tool">Framer</li>
                   <li className="tool">Swagger</li>
                   <li className="tool">Postman</li>
                   <li className="tool">Notion</li>
                   <li className="tool">Jira</li>
+                  <li className="tool">Visual Studio Code</li>
                 </StackList>
               </li>
             </InfoList>
@@ -203,6 +217,185 @@ export default function Resume() {
 
           <InfoSection>
             <div className="category">
+              <h3>사이드 프로젝트</h3>
+              <p className="txt">
+                📌 더 자세한 내용은
+                <br />
+                포트폴리오를 확인해주세요
+              </p>
+            </div>
+            <InfoList>
+              <li>
+                <TitleWrap>
+                  <h4 className="title">
+                    데일리데브
+                    <span>
+                      유명 IT 기업의 기술 관련 글을 모아보고 구독하는 서비스
+                    </span>
+                  </h4>
+                  <p className="sub-title">FE 개발 100%</p>
+                  <time>
+                    2023.06 ~ 2023.08
+                    <br />
+                    <span>총 3개월 · 리팩토링 중</span>
+                  </time>
+                </TitleWrap>
+                <InfoDetail>
+                  <h5 className="title">주요 작업</h5>
+                  <DetailList>
+                    <li>
+                      <Point>GitHub Issue</Point>를 사용하여 프로젝트의 추가
+                      기능, 개선사항, 버그 등을 효율적으로 관리함
+                    </li>
+                    <li>
+                      <Point>페이지네이션(더보기) 구현</Point> : 초기에 데이터를
+                      모두 호출한 뒤 클라이언트 단에서 가공하는 방식을 사용하여
+                      페이지 전환을 빠르게 하고 사용성을 높임
+                    </li>
+                    <li>
+                      React-Hook-Form을 사용하여 로그인, 회원가입 폼의 코드를
+                      줄이고 <Point>유효성 검사를 단순화</Point>함
+                    </li>
+                  </DetailList>
+                </InfoDetail>
+                <InfoDetail>
+                  <h5 className="title">사용 기술</h5>
+                  <StackList>
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Recoil</li>
+                    <li>React-Query</li>
+                    <li>React-Hook-Form</li>
+                    <li>TailwindCSS</li>
+                  </StackList>
+                </InfoDetail>
+                <InfoDetail>
+                  <h5 className="title">링크</h5>
+                  <UrlTagList>
+                    <li>
+                      <UrlTag
+                        href="http://daily-dev-news.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>데일리데브</span>
+                      </UrlTag>
+                    </li>
+                    <li>
+                      <UrlTag
+                        href="https://github.com/TEAM-KN/daily_dev_front"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <IconGithub />
+                        <span>깃허브</span>
+                      </UrlTag>
+                    </li>
+                    <li>
+                      <UrlTag
+                        href="https://www.youtube.com/watch?v=OTiMhn4DVe0"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>데모영상</span>
+                      </UrlTag>
+                    </li>
+                  </UrlTagList>
+                </InfoDetail>
+              </li>
+              <li>
+                <TitleWrap>
+                  <h4 className="title">
+                    연애서류합
+                    <span>소개팅 상대와의 궁합을 알아보는 서비스</span>
+                  </h4>
+                  <p className="sub-title">기획 40% / FE 개발 60%</p>
+                  <time>
+                    2023.01 ~ 2023.06
+                    <br />
+                    <span>총 6개월</span>
+                  </time>
+                </TitleWrap>
+
+                <InfoDetail>
+                  <h5 className="title">주요 작업</h5>
+                  <DetailList>
+                    <li>
+                      배포 전 반복된 테스트를 통해{" "}
+                      <ATag
+                        href="https://minuxx.notion.site/be45aec614a74078b437845a80bab34c?pvs=4"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>20개 이상의 오류사항</span>{" "}
+                      </ATag>
+                      을 발견하고 수정
+                    </li>
+                    <li>
+                      <Point>공통 컴포넌트</Point> 담당 구현 : 헤더, 모달,
+                      토스트 팝업, 로딩, 버튼 등
+                    </li>
+                    <li>
+                      <Point>유저 관련 기능</Point> 담당 구현 : 로그인,
+                      회원가입, 회원정보 수정 등
+                    </li>
+                    <li>질문지 생성 및 편집 기능 담당 구현</li>
+                  </DetailList>
+                </InfoDetail>
+                <InfoDetail>
+                  <h5 className="title">사용 기술</h5>
+                  <StackList>
+                    <li>React</li>
+                    <li>Recoil</li>
+                    <li>React-Query</li>
+                    <li>Styled-Component</li>
+                    <li>Lottie</li>
+                  </StackList>
+                </InfoDetail>
+                <InfoDetail>
+                  <h5 className="title">링크</h5>
+                  <UrlTagList>
+                    <li>
+                      <UrlTag
+                        href="https://www.love-document.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>연애서류합</span>
+                      </UrlTag>
+                    </li>
+                    <li>
+                      <UrlTag
+                        href="https://github.com/kkomyoung/love-document-client"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <IconGithub />
+                        <span>깃허브</span>
+                      </UrlTag>
+                    </li>
+                    <li>
+                      <UrlTag
+                        href="https://www.youtube.com/watch?v=cgInZd0eHeQ"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <LinkIcon />
+                        <span>데모영상</span>
+                      </UrlTag>
+                    </li>
+                  </UrlTagList>
+                </InfoDetail>
+              </li>
+            </InfoList>
+          </InfoSection>
+
+          <InfoSection>
+            <div className="category">
               <h3>업무 경험</h3>
             </div>
             <InfoList>
@@ -229,7 +422,7 @@ export default function Resume() {
                     <li>재사용 가능한 UI 컴포넌트 모듈화 작업 참여</li>
                   </DetailList>
                 </InfoDetail>
-                <InfoDetail>
+                {/* <InfoDetail>
                   <h5 className="title">사용 기술</h5>
                   <StackList>
                     <li>ES6</li>
@@ -252,7 +445,7 @@ export default function Resume() {
                     <li className="tool">Notion</li>
                     <li className="tool">Jira</li>
                   </StackList>
-                </InfoDetail>
+                </InfoDetail> */}
               </li>
               <li className="sub-list">
                 <TitleWrap>
@@ -267,14 +460,13 @@ export default function Resume() {
                   <h5 className="title">주요 업무</h5>
                   <DetailList>
                     <li>
-                      협업 시 필요한 퍼블리싱 가이드를 작성하고 관리하는 역할을
-                      담당
+                      <Point>공통 UI 컴포넌트 개발</Point> 담당 : 모달 팝업,
+                      아코디언, 약관 동의 체크박스, 테이블, 툴팁 등
                     </li>
+                    <li>퍼블리싱 마크업 가이드 작성 및 관리 담당</li>
                     <li>
-                      이전 흥국화재 구축 프로젝트에서 만든 컴포넌트들을 재사용
-                      가능하도록 정리하고, 새로운 디자인에 맞춰 적용하는 업무를
-                      담당하여 <Point>작업시간을 크게 단축</Point> 시키는데
-                      기여함
+                      Framer로 작성된 디자인, 개발 요구사항을 기반으로 페이지
+                      퍼블리싱 작업 참여
                     </li>
                   </DetailList>
                 </InfoDetail>
@@ -877,185 +1069,6 @@ export default function Resume() {
                       >
                         <LinkIcon />
                         <span>한화아쿠아플라넷</span>
-                      </UrlTag>
-                    </li>
-                  </UrlTagList>
-                </InfoDetail>
-              </li>
-            </InfoList>
-          </InfoSection>
-
-          <InfoSection>
-            <div className="category">
-              <h3>사이드 프로젝트</h3>
-              <p className="txt">
-                📌 더 자세한 내용은
-                <br />
-                포트폴리오를 확인해주세요
-              </p>
-            </div>
-            <InfoList>
-              <li>
-                <TitleWrap>
-                  <h4 className="title">
-                    데일리데브
-                    <span>
-                      유명 IT 기업의 기술 관련 글을 모아보고 구독하는 서비스
-                    </span>
-                  </h4>
-                  <p className="sub-title">FE 개발 100%</p>
-                  <time>
-                    2023.06 ~ 2023.08
-                    <br />
-                    <span>총 3개월 · 리팩토링 중</span>
-                  </time>
-                </TitleWrap>
-                <InfoDetail>
-                  <h5 className="title">주요 작업</h5>
-                  <DetailList>
-                    <li>
-                      <Point>GitHub Issue</Point>를 사용하여 프로젝트의 추가
-                      기능, 개선사항, 버그 등을 효율적으로 관리함
-                    </li>
-                    <li>
-                      <Point>페이지네이션(더보기) 구현</Point> : 초기에 데이터를
-                      모두 호출한 뒤 클라이언트 단에서 가공하는 방식을 사용하여
-                      페이지 전환을 빠르게 하고 사용성을 높임
-                    </li>
-                    <li>
-                      React-Hook-Form을 사용하여 로그인, 회원가입 폼의 코드를
-                      줄이고 <Point>유효성 검사를 단순화</Point>함
-                    </li>
-                  </DetailList>
-                </InfoDetail>
-                <InfoDetail>
-                  <h5 className="title">사용 기술</h5>
-                  <StackList>
-                    <li>React</li>
-                    <li>TypeScript</li>
-                    <li>Recoil</li>
-                    <li>React-Query</li>
-                    <li>React-Hook-Form</li>
-                    <li>TailwindCSS</li>
-                  </StackList>
-                </InfoDetail>
-                <InfoDetail>
-                  <h5 className="title">링크</h5>
-                  <UrlTagList>
-                    <li>
-                      <UrlTag
-                        href="http://daily-dev-news.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <LinkIcon />
-                        <span>데일리데브</span>
-                      </UrlTag>
-                    </li>
-                    <li>
-                      <UrlTag
-                        href="https://github.com/TEAM-KN/daily_dev_front"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <IconGithub />
-                        <span>깃허브</span>
-                      </UrlTag>
-                    </li>
-                    <li>
-                      <UrlTag
-                        href="https://www.youtube.com/watch?v=OTiMhn4DVe0"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <LinkIcon />
-                        <span>데모영상</span>
-                      </UrlTag>
-                    </li>
-                  </UrlTagList>
-                </InfoDetail>
-              </li>
-              <li>
-                <TitleWrap>
-                  <h4 className="title">
-                    연애서류합
-                    <span>소개팅 상대와의 궁합을 알아보는 서비스</span>
-                  </h4>
-                  <p className="sub-title">기획 40% / FE 개발 60%</p>
-                  <time>
-                    2023.01 ~ 2023.06
-                    <br />
-                    <span>총 6개월</span>
-                  </time>
-                </TitleWrap>
-
-                <InfoDetail>
-                  <h5 className="title">주요 작업</h5>
-                  <DetailList>
-                    <li>
-                      배포 전 반복된 테스트를 통해{" "}
-                      <ATag
-                        href="https://minuxx.notion.site/be45aec614a74078b437845a80bab34c?pvs=4"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <LinkIcon />
-                        <span>20개 이상의 오류사항</span>{" "}
-                      </ATag>
-                      을 발견하고 수정
-                    </li>
-                    <li>
-                      <Point>공통 컴포넌트</Point> 담당 구현 : 헤더, 모달,
-                      토스트 팝업, 로딩, 버튼 등
-                    </li>
-                    <li>
-                      <Point>유저 관련 기능</Point> 담당 구현 : 로그인,
-                      회원가입, 회원정보 수정 등
-                    </li>
-                    <li>질문지 생성 및 편집 기능 담당 구현</li>
-                  </DetailList>
-                </InfoDetail>
-                <InfoDetail>
-                  <h5 className="title">사용 기술</h5>
-                  <StackList>
-                    <li>React</li>
-                    <li>Recoil</li>
-                    <li>React-Query</li>
-                    <li>Styled-Component</li>
-                    <li>Lottie</li>
-                  </StackList>
-                </InfoDetail>
-                <InfoDetail>
-                  <h5 className="title">링크</h5>
-                  <UrlTagList>
-                    <li>
-                      <UrlTag
-                        href="https://www.love-document.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <LinkIcon />
-                        <span>연애서류합</span>
-                      </UrlTag>
-                    </li>
-                    <li>
-                      <UrlTag
-                        href="https://github.com/kkomyoung/love-document-client"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <IconGithub />
-                        <span>깃허브</span>
-                      </UrlTag>
-                    </li>
-                    <li>
-                      <UrlTag
-                        href="https://www.youtube.com/watch?v=cgInZd0eHeQ"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <LinkIcon />
-                        <span>데모영상</span>
                       </UrlTag>
                     </li>
                   </UrlTagList>
