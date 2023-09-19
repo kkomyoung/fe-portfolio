@@ -2,7 +2,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import Home from "../layouts/Home";
 import About from "../layouts/About";
-import Resume from "../layouts/Resume";
 import Project from "../layouts/Project";
 import Header from "../layouts/Header";
 import Contact from "../layouts/Contact";
@@ -11,6 +10,7 @@ import handleHeaderStyle from "../utils/handleHeaderStyle";
 import getAnchorPoints from "../utils/getAnchorPoints";
 import SideButtonWrap from "../components/SideButtonWrap";
 import MotionWrapper from "../components/MotionWrapper";
+import Blog from "../layouts/Blog";
 
 export default function Main() {
   const [headerStyle, setHeaderStyle] = useState("absolute");
@@ -43,7 +43,7 @@ export default function Main() {
         <Home />
         <AnchorSection refName={firstSection}>
           <About />
-          <Resume />
+          <Blog />
         </AnchorSection>
         <AnchorSection refName={secondSection}>
           <Project />
